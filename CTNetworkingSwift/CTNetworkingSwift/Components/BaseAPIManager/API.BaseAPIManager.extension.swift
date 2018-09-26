@@ -8,21 +8,19 @@
 import Foundation
 
 extension CTNetworkingBaseAPIManager {
-    func loadData() {
-        guard let serviceIdentifier = self.child?.serviceIdentifier() else { return }
-        guard let namespace = self.child?.namespace() else { return }
+    @objc func loadData() {
         guard let methodname = self.child?.methodName() else { return }
         guard let requestType = self.child?.requestType() else { return }
+        guard let service = self.child?.service else { return }
 
         isLoading = true
         
         let params = paramSource?.params(for: self)
-        let service = CTNetworkingServiceFactory.sharedInstance.service(serviceIdentifier, namespace: namespace)
-        guard let request = service.request(params: params, methodName: methodname, requestType: requestType) else {
+        guard let _request = service.request(params: params, methodName: methodname, requestType: requestType) else {
             return
         }
-        
-        service.sessionManager.request(request).response { (response) in
+
+        service.sessionManager.request(_request).response { (response) in
             self.isLoading = false
             self.response = response
             guard service.handleCommonError(self) else {

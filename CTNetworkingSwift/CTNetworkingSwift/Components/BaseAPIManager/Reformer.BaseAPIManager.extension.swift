@@ -7,17 +7,11 @@
 
 import Foundation
 
-
-protocol CTNetworkingReformer {
-    func reform(apiManager:CTNetworkingBaseAPIManager) -> Any?
-}
-
 extension CTNetworkingBaseAPIManager {
     public func fetchData(reformer:CTNetworkingReformer?) -> Any? {
         guard let reformer = reformer else {
             return self.response?.data
         }
-        
         return reformer.reform(apiManager: self)
     }
 }

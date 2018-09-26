@@ -16,16 +16,14 @@ class TestAPIManager: CTNetworkingBaseAPIManager {
 }
 
 extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
+    var service : CTNetworkingService {
+        get {
+            return CTNetworkingServiceFactory.sharedInstance.service("TestServiceIdentifier", namespace: "CTNetworkingSwift")
+        }
+    }
+    
     func methodName() -> String {
         return ""
-    }
-    
-    func serviceIdentifier() -> String {
-        return "TestServiceIdentifier"
-    }
-    
-    func namespace() -> String {
-        return "CTNetworkingSwift"
     }
     
     func requestType() -> CTNetworkingRequestType {

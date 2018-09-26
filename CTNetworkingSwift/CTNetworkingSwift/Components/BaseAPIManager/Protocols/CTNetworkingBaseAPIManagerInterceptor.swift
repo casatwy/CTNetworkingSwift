@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-protocol CTNetworkingAPIManagerInterceptor : AnyObject {
+protocol CTNetworkingBaseAPIManagerInterceptor : AnyObject {
     func beforePerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) -> Bool
     func afterPerformSuccess(_ apiManager:CTNetworkingBaseAPIManager)
     
@@ -20,7 +20,7 @@ protocol CTNetworkingAPIManagerInterceptor : AnyObject {
     func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager, response:DefaultDataResponse)
 }
 
-extension CTNetworkingAPIManagerInterceptor {
+extension CTNetworkingBaseAPIManagerInterceptor {
     func beforePerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
         return true
     }
