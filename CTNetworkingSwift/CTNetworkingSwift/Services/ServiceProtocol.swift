@@ -11,6 +11,6 @@ import Alamofire
 public protocol CTNetworkingService : NSObjectProtocol {
     var apiEnvironment : CTNetworkingAPIEnvironment { get set }
     var sessionManager : SessionManager { get }
-    func request(params:[String:Any]?, methodName:String, requestType:CTNetworkingRequestType) -> URLRequest?
+    func request(params:[String:Any]?, methodName:String, requestType:HTTPMethod) -> URLRequest?
     func handleCommonError(_ apiManager:CTNetworkingBaseAPIManager) -> Bool
 }

@@ -15,10 +15,6 @@ public enum CTNetworkingAPIEnvironment : Int {
     case Release = 2
 }
 
-public enum CTNetworkingRequestType {
-    case post, get
-}
-
 public enum CTNetworkingErrorType {
     
     case defaultStatus
