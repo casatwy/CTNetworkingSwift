@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CTNetworkingBaseAPIManagerChild : AnyObject {
+public protocol CTNetworkingBaseAPIManagerChild : AnyObject {
     var service : CTNetworkingService { get }
     func methodName() -> String
     func requestType() -> CTNetworkingRequestType

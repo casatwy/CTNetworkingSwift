@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol CTNetworkingBaseAPIManagerParamSource : AnyObject {
+public protocol CTNetworkingBaseAPIManagerParamSource : AnyObject {
     func params(for apiManager:CTNetworkingBaseAPIManager) -> ParamsType?
 }

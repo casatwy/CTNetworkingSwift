@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-protocol CTNetworkingService : NSObjectProtocol {
+public protocol CTNetworkingService : NSObjectProtocol {
     var apiEnvironment : CTNetworkingAPIEnvironment { get set }
     var sessionManager : SessionManager { get }
     func request(params:[String:Any]?, methodName:String, requestType:CTNetworkingRequestType) -> URLRequest?

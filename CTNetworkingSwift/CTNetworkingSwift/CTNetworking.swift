@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias ParamsType = [String:Any]
+public typealias ParamsType = [String:Any]
 
 public enum CTNetworkingAPIEnvironment {
     case develop, prerelease, release

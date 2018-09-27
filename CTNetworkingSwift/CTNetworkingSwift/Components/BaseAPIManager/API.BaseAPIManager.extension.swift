@@ -8,7 +8,7 @@
 import Foundation
 
 extension CTNetworkingBaseAPIManager {
-    @objc func loadData() {
+    @objc public func loadData() {
         guard let methodname = self.child?.methodName() else { return }
         guard let requestType = self.child?.requestType() else { return }
         guard let service = self.child?.service else { return }

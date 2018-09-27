@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-protocol CTNetworkingBaseAPIManagerValidator : AnyObject {
+public protocol CTNetworkingBaseAPIManagerValidator : AnyObject {
     func isCorrect(manager:CTNetworkingBaseAPIManager, params:ParamsType?) -> CTNetworkingErrorType.Params
     func isCorrect(manager:CTNetworkingBaseAPIManager, response: DefaultDataResponse) -> CTNetworkingErrorType.Response
 }
