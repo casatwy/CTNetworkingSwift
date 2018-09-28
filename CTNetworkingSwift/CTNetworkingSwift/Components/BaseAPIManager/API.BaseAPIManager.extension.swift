@@ -20,9 +20,7 @@ extension CTNetworkingBaseAPIManager {
             return
         }
         
-        if let _child = child {
-            print("\(_request.logString(apiName: _child.methodName(), service: _child.service))")
-        }
+        print("\(_request.logString(apiName: methodname, service: service))")
 
         service.sessionManager.request(_request).response { (response) in
             self.isLoading = false
