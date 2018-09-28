@@ -11,7 +11,7 @@ import Alamofire
 
 class TestService: NSObject, CTNetworkingService {
     
-    var apiEnvironment : CTNetworkingAPIEnvironment = .release
+    var apiEnvironment : CTNetworkingAPIEnvironment = .Release
     let sessionManager: SessionManager = {
         let _sessionManager = SessionManager()
         return _sessionManager
