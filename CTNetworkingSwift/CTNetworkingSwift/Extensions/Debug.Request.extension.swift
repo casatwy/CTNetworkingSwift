@@ -13,10 +13,7 @@ extension URLRequest {
         
         var logString = "\n\n***********************\nRequest Start\n***********************\n\n"
         
-        logString += "API Name:\t\t\(apiName)"
-        logString += "Method:\t\t\(httpMethod ?? "N/A")"
-        logString += "Service:\t\t\(type(of: service))"
-        
+
         var environmentString = ""
         switch service.apiEnvironment {
         case .Develop:
@@ -26,22 +23,28 @@ extension URLRequest {
         case .Release:
             environmentString = "Release"
         }
-        logString += "Environment:\t\t\(environmentString)"
+        
+        logString += "Environment:\t\(environmentString)\n"
+        logString += "API Name:\t\t\(apiName)\n"
+        logString += "Method:\t\t\t\(httpMethod ?? "N/A")\n"
+        logString += "Service:\t\t\(type(of: service))\n"
         logString += descriptionLogString()
         
         return logString
     }
     
-    public func descriptionLogString() -> String {
+    func descriptionLogString() -> String {
         var result = ""
         
         result += "\n\nHTTP URL:\n\t\(url?.absoluteString ?? "N/A")"
 
         var headerString = ""
         if let httpHeaders = allHTTPHeaderFields {
-            result += "\n\nHTTP Header:\n\t\(dictionaryToJsonString(dictionary: httpHeaders))"
-            for (headerKey, headerValue) in httpHeaders.enumerated() {
-                headerString += " -H \"\(headerKey):\(headerValue)\""
+            result += "\n\nHTTP Header:"
+            
+            httpHeaders.forEach { (key, value) in
+                result += "\n\t\(key):\(value)"
+                headerString += " -H \"\(key):\(value)\""
             }
         }
 
@@ -51,7 +54,7 @@ extension URLRequest {
             result += "\n\nHTTP Body:\n\t\(bodyString)"
         }
         
-        result += "\n\nCURL:\n\t curl -X \(httpMethod ?? "Get") \(headerString) -d \'\(bodyString)\' \(url?.absoluteString ?? "")"
+        result += "\n\nCURL:\n\t curl -X \(httpMethod ?? "Get")\(headerString) -d \'\(bodyString)\' \(url?.absoluteString ?? "")"
 
         return result
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TestAPIManager: CTNetworkingBaseAPIManager {
     override init() {
@@ -18,7 +19,7 @@ class TestAPIManager: CTNetworkingBaseAPIManager {
 extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
     var service : CTNetworkingService {
         get {
-            return CTNetworkingServiceFactory.sharedInstance.service("TestServiceIdentifier", namespace: "CTNetworkingSwift")
+            return TestService()
         }
     }
     
@@ -26,7 +27,7 @@ extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
         return ""
     }
     
-    func requestType() -> CTNetworkingRequestType {
+    func requestType() -> HTTPMethod {
         return .get
     }
 }

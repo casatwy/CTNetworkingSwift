@@ -12,13 +12,10 @@ import Alamofire
 class TestService: NSObject, CTNetworkingService {
     
     var apiEnvironment : CTNetworkingAPIEnvironment = .Release
-    let sessionManager: SessionManager = {
-        let _sessionManager = SessionManager()
-        return _sessionManager
-    }()
+    let sessionManager: SessionManager = SessionManager()
     let baseURL = URL(string: "https://casatwy.com")
     
-    func request(params:[String:Any]?, methodName:String, requestType:CTNetworkingRequestType) -> URLRequest? {
+    func request(params:[String:Any]?, methodName:String, requestType:HTTPMethod) -> URLRequest? {
         guard let url = baseURL else { return nil }
         let request = URLRequest(url: url)
         return request
