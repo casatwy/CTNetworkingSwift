@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 extension CTNetworkingBaseAPIManager {
-    @objc public func loadData() {
+    @objc open func loadData() {
         guard let _child = child else { return }
 
         isLoading = true

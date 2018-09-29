@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A22E83F215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22E83E215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift */; };
 		4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */; };
 		4A460E7F215DEC3700C98571 /* Debug.Response.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */; };
 		4A9374A8215BDD4D00B88CB8 /* SchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0B21A842E0906B61311AD2E9 /* Pods_CTNetworkingSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTNetworkingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A22E83E215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTNetworkingAPIManagerPagable.swift; sourceTree = "<group>"; };
 		4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Request.extension.swift; sourceTree = "<group>"; };
 		4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Response.Extension.swift; sourceTree = "<group>"; };
 		4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeHandler.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				4A9374A1215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerValidator.swift */,
 				4A9374A2215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerCallbackDelegate.swift */,
 				4A9374A3215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerChild.swift */,
+				4A22E83E215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				4A9374B3215BDD4D00B88CB8 /* LifeCycle.ViewController.extension.swift in Sources */,
 				4AAF5822215BDB5C009E312E /* AppDelegate.swift in Sources */,
 				4A9374AF215BDD4D00B88CB8 /* ViewController.swift in Sources */,
+				4A22E83F215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift in Sources */,
 				4A9374B0215BDD4D00B88CB8 /* TableView.ViewController.extension.swift in Sources */,
 				4A9374AC215BDD4D00B88CB8 /* TestService.swift in Sources */,
 				4A9374AD215BDD4D00B88CB8 /* TestAPIManager.swift in Sources */,

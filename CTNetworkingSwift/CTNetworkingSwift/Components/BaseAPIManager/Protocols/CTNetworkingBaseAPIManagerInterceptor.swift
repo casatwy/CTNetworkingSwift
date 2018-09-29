@@ -20,7 +20,7 @@ public protocol CTNetworkingBaseAPIManagerInterceptor : AnyObject {
     func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager, response:DefaultDataResponse)
 }
 
-extension CTNetworkingBaseAPIManagerInterceptor {
+public extension CTNetworkingBaseAPIManagerInterceptor {
     func beforePerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
         return true
     }

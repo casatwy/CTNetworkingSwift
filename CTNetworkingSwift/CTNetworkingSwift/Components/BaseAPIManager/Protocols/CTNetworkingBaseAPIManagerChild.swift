@@ -9,6 +9,11 @@ import Alamofire
 
 public protocol CTNetworkingBaseAPIManagerChild : AnyObject {
     var service : CTNetworkingService { get }
+    
+    var isPagable : Bool { get }
+    
     func methodName() -> String
     func requestType() -> HTTPMethod
+    
+
 }

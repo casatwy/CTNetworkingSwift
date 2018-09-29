@@ -18,9 +18,8 @@ open class CTNetworkingBaseAPIManager: NSObject {
 
     public var response : DefaultDataResponse? = nil
     public var request : DataRequest? = nil
-
+    
     public var isLoading : Bool = false
-    public var isPagable : Bool = false
 }
 
 
