@@ -10,6 +10,7 @@
 		4A22E83F215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22E83E215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift */; };
 		4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */; };
 		4A460E7F215DEC3700C98571 /* Debug.Response.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */; };
+		4A8A12A0215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A129F215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift */; };
 		4A9374A8215BDD4D00B88CB8 /* SchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */; };
 		4A9374A9215BDD4D00B88CB8 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937487215BDD4D00B88CB8 /* WKWebViewController.swift */; };
 		4A9374AA215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937488215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift */; };
@@ -45,6 +46,7 @@
 		4A22E83E215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTNetworkingAPIManagerPagable.swift; sourceTree = "<group>"; };
 		4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Request.extension.swift; sourceTree = "<group>"; };
 		4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Response.Extension.swift; sourceTree = "<group>"; };
+		4A8A129F215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerInterceptor.BaseAPIManager.extension.swift; sourceTree = "<group>"; };
 		4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeHandler.swift; sourceTree = "<group>"; };
 		4A937487215BDD4D00B88CB8 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		4A937488215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycle.WebViewController.extension.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				4A93749B215BDD4D00B88CB8 /* API.BaseAPIManager.extension.swift */,
 				4A93749C215BDD4D00B88CB8 /* Reformer.BaseAPIManager.extension.swift */,
 				4A9374A4215BDD4D00B88CB8 /* Callback.BaseAPIManager.extension.swift */,
+				4A8A129F215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift */,
 				4A93749E215BDD4D00B88CB8 /* Protocols */,
 			);
 			path = BaseAPIManager;
@@ -405,6 +408,7 @@
 				4A9374AD215BDD4D00B88CB8 /* TestAPIManager.swift in Sources */,
 				4A9374BD215BDD4D00B88CB8 /* Callback.BaseAPIManager.extension.swift in Sources */,
 				4A9374A8215BDD4D00B88CB8 /* SchemeHandler.swift in Sources */,
+				4A8A12A0215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift in Sources */,
 				4A9374BB215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerCallbackDelegate.swift in Sources */,
 				4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */,
 				4A9374B1215BDD4D00B88CB8 /* ParamSource.ViewController.extension.swift in Sources */,

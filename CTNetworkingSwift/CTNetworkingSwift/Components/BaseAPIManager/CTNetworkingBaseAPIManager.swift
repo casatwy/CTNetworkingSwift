@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 @objc
-open class CTNetworkingBaseAPIManager: NSObject {
+open class CTNetworkingBaseAPIManager : NSObject, CTNetworkingAPIManager {
     public weak var delegate : CTNetworkingBaseAPIManagerCallbackDelegate? = nil
     public weak var paramSource : CTNetworkingBaseAPIManagerParamSource? = nil
     public weak var validator : CTNetworkingBaseAPIManagerValidator? = nil
@@ -21,6 +21,23 @@ open class CTNetworkingBaseAPIManager: NSObject {
     
     public var isLoading : Bool = false
 }
+
+public protocol CTNetworkingAPIManager {
+    var delegate : CTNetworkingBaseAPIManagerCallbackDelegate? { get set }
+    var paramSource : CTNetworkingBaseAPIManagerParamSource? { get set }
+    var validator : CTNetworkingBaseAPIManagerValidator? { get set }
+    var interceptor : CTNetworkingBaseAPIManagerInterceptor? { get set }
+    var child : CTNetworkingBaseAPIManagerChild? { get set }
+    
+    var response : DefaultDataResponse? { get set }
+    var request : DataRequest? { get set }
+    
+    var isLoading : Bool { get set }
+}
+
+
+
+
 
 
 

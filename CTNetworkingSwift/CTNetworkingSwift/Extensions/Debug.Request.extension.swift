@@ -13,7 +13,6 @@ extension URLRequest {
     public func logString(apiName:String, service: CTNetworkingService) -> String {
         
         var logString = "\n\n***********************\nRequest Start\n***********************\n\n"
-        
 
         var environmentString = ""
         switch service.apiEnvironment {

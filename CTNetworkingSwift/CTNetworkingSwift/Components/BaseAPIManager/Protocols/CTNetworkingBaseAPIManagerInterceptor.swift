@@ -17,7 +17,7 @@ public protocol CTNetworkingBaseAPIManagerInterceptor : AnyObject {
     
     func shouldCallAPI(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) -> Bool
     func afterAPICalling(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?)
-    func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager, response:DefaultDataResponse)
+    func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager)
 }
 
 public extension CTNetworkingBaseAPIManagerInterceptor {
@@ -45,7 +45,7 @@ public extension CTNetworkingBaseAPIManagerInterceptor {
         // do nothing
     }
     
-    func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager, response:DefaultDataResponse) {
+    func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager) {
         // do nothing
     }
 }

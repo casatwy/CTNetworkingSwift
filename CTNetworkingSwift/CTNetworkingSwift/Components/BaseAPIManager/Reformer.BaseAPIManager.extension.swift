@@ -7,7 +7,11 @@
 
 import Foundation
 
-extension CTNetworkingBaseAPIManager {
+public protocol CTNetworkingAPIManagerFetchable : CTNetworkingAPIManager {
+    func fetchData(reformer:CTNetworkingReformer?) -> Any?
+}
+
+extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerFetchable {
     public func fetchData(reformer:CTNetworkingReformer?) -> Any? {
         guard let reformer = reformer else {
             return self.response?.data

@@ -8,11 +8,12 @@
 
 import Foundation
 
-public protocol CTNetworkingAPIManagerPagable {
+public protocol CTNetworkingAPIManagerPagable : AnyObject, CTNetworkingAPIManagerCallable, CTNetworkingAPIManagerFetchable {
     var pageSize : Int { get }
     var isLastPage : Bool { get }
     var isFirstPage : Bool { get }
     var currentPageNumber : Int { get }
+    var totalCount : Int? { get }
     
     func loadNextPage()
 }
