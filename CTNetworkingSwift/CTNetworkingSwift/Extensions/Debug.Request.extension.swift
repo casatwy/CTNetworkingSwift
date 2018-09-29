@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 extension URLRequest {
     public func logString(apiName:String, service: CTNetworkingService) -> String {
@@ -29,6 +30,8 @@ extension URLRequest {
         logString += "Method:\t\t\t\(httpMethod ?? "N/A")\n"
         logString += "Service:\t\t\(type(of: service))\n"
         logString += descriptionLogString()
+        
+        logString += "\n\n***********************\nRequest End\n***********************\n\n"
         
         return logString
     }

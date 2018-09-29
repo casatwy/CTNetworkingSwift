@@ -6,37 +6,35 @@
 //
 
 import Foundation
+import Alamofire
 
 extension CTNetworkingBaseAPIManager {
     @objc public func loadData() {
-        guard let methodname = self.child?.methodName() else { return }
-        guard let requestType = self.child?.requestType() else { return }
-        guard let service = self.child?.service else { return }
+        guard let _child = child else { return }
 
         isLoading = true
         
         let params = paramSource?.params(for: self)
-        guard let _request = service.request(params: params, methodName: methodname, requestType: requestType) else {
-            return
+        let _request = _child.service.request(params: params, methodName: _child.methodName(), requestType: _child.requestType())
+        request = _request
+        
+        if let request = _request.request {
+            print("\(request.logString(apiName: _child.methodName(), service: _child.service))")
         }
         
-        if let _child = child {
-            print("\(_request.logString(apiName: _child.methodName(), service: _child.service))")
-        }
-
-        service.sessionManager.request(_request).response { (response) in
-            self.isLoading = false
+        _request.response { (response) in
             self.response = response
-            guard service.handleCommonError(self) else {
-                return
-            }
-
-            guard response.error != nil else {
-                self.success()
-                return
-            }
+            self.isLoading = false
             
-            self.fail()
+            guard _child.service.handleCommonError(self) else { return }
+            
+            print(response.logString())
+            
+            if response.error == nil {
+                self.success()
+            } else {
+                self.fail()
+            }
         }
     }
 }
