@@ -15,7 +15,7 @@ open class CTNetworkingBaseAPIManager: NSObject {
     public weak var validator : CTNetworkingBaseAPIManagerValidator? = nil
     public weak var interceptor : CTNetworkingBaseAPIManagerInterceptor? = nil
     public weak var child : CTNetworkingBaseAPIManagerChild? = nil
-    
+
     public var response : DefaultDataResponse? = nil
     public var request : DataRequest? = nil
 

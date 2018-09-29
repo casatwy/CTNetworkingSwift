@@ -53,11 +53,13 @@ extension URLRequest {
 
         var bodyString = ""
         if let bodyData = httpBody {
-            bodyString += String(data: bodyData, encoding: .utf8) ?? ""
+            if let _bodyString = String(data: bodyData, encoding: .utf8) {
+                bodyString += " -d \'\(_bodyString)\'"
+            }
             result += "\n\nHTTP Body:\n\t\(bodyString)"
         }
         
-        result += "\n\nCURL:\n\t curl -X \(httpMethod ?? "Get")\(headerString) -d \'\(bodyString)\' \(url?.absoluteString ?? "")"
+        result += "\n\nCURL:\n\t curl -X \(httpMethod ?? "Get")\(headerString)\(bodyString) \(url?.absoluteString ?? "")"
 
         return result
     }

@@ -18,10 +18,8 @@ extension CTNetworkingBaseAPIManager {
         let _request = _child.service.request(params: params, methodName: _child.methodName(), requestType: _child.requestType())
         request = _request
         
-        if let request = _request.request {
-            print("\(request.logString(apiName: _child.methodName(), service: _child.service))")
-        }
-        
+        print("\(_request.logString(apiName: methodname, service: service))")
+
         _request.response { (response) in
             self.response = response
             self.isLoading = false
