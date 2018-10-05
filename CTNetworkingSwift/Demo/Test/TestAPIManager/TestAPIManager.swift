@@ -17,17 +17,21 @@ class TestAPIManager: CTNetworkingBaseAPIManager {
 }
 
 extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
+    var isPagable: Bool {
+        return false
+    }
+    
+    var methodName: String {
+        return ""
+    }
+    
+    var requestType: HTTPMethod {
+        return .get
+    }
+    
     var service : CTNetworkingService {
         get {
             return TestService()
         }
-    }
-    
-    func methodName() -> String {
-        return ""
-    }
-    
-    func requestType() -> HTTPMethod {
-        return .get
     }
 }
