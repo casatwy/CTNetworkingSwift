@@ -18,8 +18,9 @@ open class CTNetworkingBaseAPIManager : NSObject, CTNetworkingAPIManager {
 
     public var response : DefaultDataResponse? = nil
     public var request : DataRequest? = nil
-    
+
     public var isLoading : Bool = false
+    public let managerIdentifier = UUID().uuidString
 }
 
 public protocol CTNetworkingAPIManager {
