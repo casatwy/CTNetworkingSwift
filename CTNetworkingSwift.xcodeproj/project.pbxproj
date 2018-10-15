@@ -14,7 +14,6 @@
 		4A9374A8215BDD4D00B88CB8 /* SchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */; };
 		4A9374A9215BDD4D00B88CB8 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937487215BDD4D00B88CB8 /* WKWebViewController.swift */; };
 		4A9374AA215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937488215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift */; };
-		4A9374AB215BDD4D00B88CB8 /* Target_TestServiceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93748B215BDD4D00B88CB8 /* Target_TestServiceIdentifier.swift */; };
 		4A9374AC215BDD4D00B88CB8 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93748D215BDD4D00B88CB8 /* TestService.swift */; };
 		4A9374AD215BDD4D00B88CB8 /* TestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93748F215BDD4D00B88CB8 /* TestAPIManager.swift */; };
 		4A9374AE215BDD4D00B88CB8 /* CTNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937490215BDD4D00B88CB8 /* CTNetworkingProtocol.swift */; };
@@ -50,7 +49,6 @@
 		4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeHandler.swift; sourceTree = "<group>"; };
 		4A937487215BDD4D00B88CB8 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		4A937488215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycle.WebViewController.extension.swift; sourceTree = "<group>"; };
-		4A93748B215BDD4D00B88CB8 /* Target_TestServiceIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target_TestServiceIdentifier.swift; sourceTree = "<group>"; };
 		4A93748D215BDD4D00B88CB8 /* TestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
 		4A93748F215BDD4D00B88CB8 /* TestAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAPIManager.swift; sourceTree = "<group>"; };
 		4A937490215BDD4D00B88CB8 /* CTNetworkingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingProtocol.swift; sourceTree = "<group>"; };
@@ -134,19 +132,10 @@
 		4A937489215BDD4D00B88CB8 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				4A93748A215BDD4D00B88CB8 /* TestTarget */,
 				4A93748C215BDD4D00B88CB8 /* TestService */,
 				4A93748E215BDD4D00B88CB8 /* TestAPIManager */,
 			);
 			path = Test;
-			sourceTree = "<group>";
-		};
-		4A93748A215BDD4D00B88CB8 /* TestTarget */ = {
-			isa = PBXGroup;
-			children = (
-				4A93748B215BDD4D00B88CB8 /* Target_TestServiceIdentifier.swift */,
-			);
-			path = TestTarget;
 			sourceTree = "<group>";
 		};
 		4A93748C215BDD4D00B88CB8 /* TestService */ = {
@@ -418,7 +407,6 @@
 				4A9374B9215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerInterceptor.swift in Sources */,
 				4A9374AE215BDD4D00B88CB8 /* CTNetworkingProtocol.swift in Sources */,
 				4A9374B6215BDD4D00B88CB8 /* Reformer.BaseAPIManager.extension.swift in Sources */,
-				4A9374AB215BDD4D00B88CB8 /* Target_TestServiceIdentifier.swift in Sources */,
 				4A9374BC215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerChild.swift in Sources */,
 				4A9374B2215BDD4D00B88CB8 /* Callback.ViewController.extension.swift in Sources */,
 				4A9374B8215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerParamSource.swift in Sources */,

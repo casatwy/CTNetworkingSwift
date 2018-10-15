@@ -26,16 +26,11 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         // do nothing
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            sessionManager.request("https://casatwy.com/CTMediator_in_Swift.html").response { (response) in
-                print("\(response), \(type(of: response))")
-            }
+            testAPIManager.loadData()
         }
         if indexPath.row == 1 {
             let viewController = WKWebViewController()
             navigationController?.pushViewController(viewController, animated: true)
-        }
-        if indexPath.row == 2 {
-            testAPIManager.loadData()
         }
     }
 }

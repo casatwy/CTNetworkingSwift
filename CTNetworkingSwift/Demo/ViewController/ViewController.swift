@@ -21,9 +21,8 @@ class ViewController: UIViewController {
     }()
     
     lazy var dataSource = [
-        "POST Request Test",
-        "WKWebView",
         "API Manager",
+        "WKWebView",
     ]
     
     lazy var sessionManager : SessionManager = {

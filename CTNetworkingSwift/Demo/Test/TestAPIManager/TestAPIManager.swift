@@ -31,7 +31,7 @@ extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
     
     var service : CTNetworkingService {
         get {
-            return TestService()
+            return TestService.sharedInstance
         }
     }
 }
