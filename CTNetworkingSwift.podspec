@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CTNetworkingSwift"
-  s.version      = "9"
+  s.version      = "10"
   s.summary      = "CTNetworkingSwift."
   s.swift_version= "4.2"
 
@@ -136,5 +136,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "CTMediator"
   s.dependency "Alamofire"
+  s.dependency "SwiftyJSON"
 
 end

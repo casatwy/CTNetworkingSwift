@@ -10,7 +10,16 @@ import UIKit
 import Alamofire
 
 class TestService: CTNetworkingService {
-    static let sharedInstance: CTNetworkingService = TestService()
+    static let _sharedInstance: CTNetworkingService = TestService()
+    
+    static var sharedInstance: CTNetworkingService {
+        get {
+            return _sharedInstance
+        }
+        set {
+            // do nothing
+        }
+    }
     
     func request(params: ParamsType?, methodName: String, requestType: HTTPMethod) -> DataRequest {
         return sessionManager.request("https://casatwy.com")
