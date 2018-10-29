@@ -15,6 +15,11 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
     @objc open func loadData() {
 
         let params = paramSource?.params(for: self)
+        
+        if validator?.isCorrect(manager: self, params: params) != .isCorrect {
+
+        }
+        
         guard shouldCallAPI(self, params: params) else { return }
 
         guard let _child = child else { return }

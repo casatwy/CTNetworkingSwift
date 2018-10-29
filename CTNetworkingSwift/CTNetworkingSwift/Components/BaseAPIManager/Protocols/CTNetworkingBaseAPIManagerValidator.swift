@@ -14,7 +14,7 @@ public protocol CTNetworkingBaseAPIManagerValidator : AnyObject {
 }
 
 extension CTNetworkingBaseAPIManagerValidator {
-    func isCorrect(params:ParamsType?, manager:CTNetworkingBaseAPIManager) -> CTNetworkingErrorType.Params {
+    func isCorrect(manager:CTNetworkingBaseAPIManager, params:ParamsType?) -> CTNetworkingErrorType.Params {
         return .correct
     }
     
