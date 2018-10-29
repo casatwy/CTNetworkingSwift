@@ -9,8 +9,18 @@
 import UIKit
 import Alamofire
 
+<<<<<<< Updated upstream
 class TestService: CTNetworkingService {
     static let _sharedInstance: CTNetworkingService = TestService()
+=======
+class TestService {
+    static let _sharedInstance = MandarinService()
+    lazy var _apiEnvironment: CTNetworkingAPIEnvironment = .Release
+    lazy var _sessionManager: SessionManager = SessionManager.default
+}
+
+extension TestService : CTNetworkingService {
+>>>>>>> Stashed changes
     
     static var sharedInstance: CTNetworkingService {
         get {
@@ -20,15 +30,31 @@ class TestService: CTNetworkingService {
             // do nothing
         }
     }
+<<<<<<< Updated upstream
+=======
+    
+    var apiEnvironment: CTNetworkingAPIEnvironment {
+        get {
+            return _apiEnvironment
+        }
+        set(newValue) {
+            _apiEnvironment = newValue
+        }
+    }
+    
+    var sessionManager: SessionManager {
+        get {
+            return _sessionManager
+        }
+    }
+>>>>>>> Stashed changes
     
     func request(params: ParamsType?, methodName: String, requestType: HTTPMethod) -> DataRequest {
+        // need return DataRequest
         return sessionManager.request("https://casatwy.com")
     }
     
-    var apiEnvironment : CTNetworkingAPIEnvironment = .Release
-    let sessionManager: SessionManager = SessionManager()
-
-    func handleCommonError(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
+    func handleCommonError(_ apiManager: CTNetworkingBaseAPIManager) -> Bool {
         return true
     }
 }

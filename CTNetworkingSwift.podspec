@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CTNetworkingSwift"
-  s.version      = "11"
+  s.version      = "12"
   s.summary      = "CTNetworkingSwift."
   s.swift_version= "4.2"
 
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
