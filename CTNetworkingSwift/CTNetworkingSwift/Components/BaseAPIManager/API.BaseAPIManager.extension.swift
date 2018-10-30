@@ -42,7 +42,11 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
             print(response.logString())
             
             if response.error == nil {
-                self.success()
+                if self.validator?.isCorrect(manager: self, response: response) != CTNetworkingErrorType.Response.correct {
+                    self.fail()
+                } else {
+                    self.success()
+                }
             } else {
                 self.fail()
             }
