@@ -16,10 +16,10 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
 
         let params = paramSource?.params(for: self)
         
-//        if validator?.isCorrect(manager: self, params: params) != .isCorrect {
-//            fail()
-//            return
-//        }
+        if validator?.isCorrect(manager: self, params: params) != CTNetworkingErrorType.Params.correct {
+            fail()
+            return
+        }
         
         guard shouldCallAPI(self, params: params) else { return }
 
