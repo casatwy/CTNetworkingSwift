@@ -11,9 +11,6 @@
 		4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */; };
 		4A460E7F215DEC3700C98571 /* Debug.Response.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */; };
 		4A8A12A0215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A129F215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift */; };
-		4A9374A8215BDD4D00B88CB8 /* SchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */; };
-		4A9374A9215BDD4D00B88CB8 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937487215BDD4D00B88CB8 /* WKWebViewController.swift */; };
-		4A9374AA215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937488215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift */; };
 		4A9374AC215BDD4D00B88CB8 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93748D215BDD4D00B88CB8 /* TestService.swift */; };
 		4A9374AD215BDD4D00B88CB8 /* TestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93748F215BDD4D00B88CB8 /* TestAPIManager.swift */; };
 		4A9374AE215BDD4D00B88CB8 /* CTNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937490215BDD4D00B88CB8 /* CTNetworkingProtocol.swift */; };
@@ -46,9 +43,6 @@
 		4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Request.extension.swift; sourceTree = "<group>"; };
 		4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Response.Extension.swift; sourceTree = "<group>"; };
 		4A8A129F215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerInterceptor.BaseAPIManager.extension.swift; sourceTree = "<group>"; };
-		4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeHandler.swift; sourceTree = "<group>"; };
-		4A937487215BDD4D00B88CB8 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
-		4A937488215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycle.WebViewController.extension.swift; sourceTree = "<group>"; };
 		4A93748D215BDD4D00B88CB8 /* TestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
 		4A93748F215BDD4D00B88CB8 /* TestAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAPIManager.swift; sourceTree = "<group>"; };
 		4A937490215BDD4D00B88CB8 /* CTNetworkingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingProtocol.swift; sourceTree = "<group>"; };
@@ -111,22 +105,11 @@
 		4A937484215BDD4D00B88CB8 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				4A937485215BDD4D00B88CB8 /* WebViewController */,
 				4A937489215BDD4D00B88CB8 /* Test */,
 				4A937490215BDD4D00B88CB8 /* CTNetworkingProtocol.swift */,
 				4A937491215BDD4D00B88CB8 /* ViewController */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		4A937485215BDD4D00B88CB8 /* WebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4A937486215BDD4D00B88CB8 /* SchemeHandler.swift */,
-				4A937487215BDD4D00B88CB8 /* WKWebViewController.swift */,
-				4A937488215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift */,
-			);
-			path = WebViewController;
 			sourceTree = "<group>";
 		};
 		4A937489215BDD4D00B88CB8 /* Test */ = {
@@ -386,8 +369,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9374B4215BDD4D00B88CB8 /* CTNetworking.swift in Sources */,
-				4A9374AA215BDD4D00B88CB8 /* LifeCycle.WebViewController.extension.swift in Sources */,
-				4A9374A9215BDD4D00B88CB8 /* WKWebViewController.swift in Sources */,
 				4A9374BE215BDD4D00B88CB8 /* ServiceProtocol.swift in Sources */,
 				4A460E7F215DEC3700C98571 /* Debug.Response.Extension.swift in Sources */,
 				4A9374B3215BDD4D00B88CB8 /* LifeCycle.ViewController.extension.swift in Sources */,
@@ -398,7 +379,6 @@
 				4A9374AC215BDD4D00B88CB8 /* TestService.swift in Sources */,
 				4A9374AD215BDD4D00B88CB8 /* TestAPIManager.swift in Sources */,
 				4A9374BD215BDD4D00B88CB8 /* Callback.BaseAPIManager.extension.swift in Sources */,
-				4A9374A8215BDD4D00B88CB8 /* SchemeHandler.swift in Sources */,
 				4A8A12A0215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift in Sources */,
 				4A9374BB215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerCallbackDelegate.swift in Sources */,
 				4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */,

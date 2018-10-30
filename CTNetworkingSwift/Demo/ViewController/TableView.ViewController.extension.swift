@@ -28,9 +28,5 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             testAPIManager.loadData()
         }
-        if indexPath.row == 1 {
-            let viewController = WKWebViewController()
-            navigationController?.pushViewController(viewController, animated: true)
-        }
     }
 }

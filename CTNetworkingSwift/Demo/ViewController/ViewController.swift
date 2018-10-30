@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     
     lazy var dataSource = [
         "API Manager",
-        "WKWebView",
     ]
     
     lazy var sessionManager : SessionManager = {
