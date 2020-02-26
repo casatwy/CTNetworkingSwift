@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.9.1)
+  - Alamofire (5.0.2)
   - CTMediator (25)
   - SwiftHandyFrame (7)
   - SwiftyJSON (5.0.0)
@@ -18,11 +18,11 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   SwiftHandyFrame: 7cbe4e55037c5c794309b4de8855d3b8abaf4ee6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: a4e0a5d356517c8a8b7ab38db71544ff7893684e
+PODFILE CHECKSUM: cb568ea4bcc0f2d76819bf7a5afb96473f0d935b
 
 COCOAPODS: 1.8.4
