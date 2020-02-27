@@ -13,8 +13,11 @@ class TestAPIManager: CTNetworkingBaseAPIManager {
     override init() {
         super.init()
         child = self
+        validator = self
     }
 }
+
+extension TestAPIManager: CTNetworkingBaseAPIManagerValidator{}
 
 extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
     var isPagable: Bool {
