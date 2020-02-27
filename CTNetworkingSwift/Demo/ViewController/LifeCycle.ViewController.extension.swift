@@ -17,6 +17,6 @@ extension ViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        tableView.ct_fill()
+        tableView.hf.fill()
     }
 }
