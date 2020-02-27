@@ -24,25 +24,22 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
         guard shouldCallAPI(self, params: params) else { return }
 
         guard let _child = child else { return }
-        request = _child.service.request(params: params, methodName: _child.methodName, requestType: _child.requestType)
+        let request = _child.service.request(params: params, methodName: _child.methodName, requestType: _child.requestType)
         
-        if let request = request?.request {
+        if let request = request.request {
             print(request.logString(apiName: _child.methodName, service: _child.service))
         }
         
         isLoading = true
-        request!.response { (response) in
-            self.response = response
+        request.response { (response) in
             self.isLoading = false
             
             self.didReceiveResponse(self)
 
             guard _child.service.handleCommonError(self) else { return }
             
-            print(response.logString())
-            
             if response.error == nil {
-                if self.validator?.isCorrect(manager: self, response: response) != CTNetworkingErrorType.Response.correct {
+                if self.validator?.isCorrect(manager: self) != CTNetworkingErrorType.Response.correct {
                     self.fail()
                 } else {
                     self.success()

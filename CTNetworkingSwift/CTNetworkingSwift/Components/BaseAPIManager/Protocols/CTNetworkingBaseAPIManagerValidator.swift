@@ -10,7 +10,7 @@ import Alamofire
 
 public protocol CTNetworkingBaseAPIManagerValidator : AnyObject {
     func isCorrect(manager:CTNetworkingBaseAPIManager, params:ParamsType?) -> CTNetworkingErrorType.Params
-    func isCorrect(manager:CTNetworkingBaseAPIManager, response: DefaultDataResponse) -> CTNetworkingErrorType.Response
+    func isCorrect(manager:CTNetworkingBaseAPIManager) -> CTNetworkingErrorType.Response
 }
 
 extension CTNetworkingBaseAPIManagerValidator {
@@ -18,7 +18,7 @@ extension CTNetworkingBaseAPIManagerValidator {
         return .correct
     }
     
-    func isCorrect(manager:CTNetworkingBaseAPIManager, response: DefaultDataResponse) -> CTNetworkingErrorType.Response {
+    func isCorrect(manager:CTNetworkingBaseAPIManager) -> CTNetworkingErrorType.Response {
         return .correct
     }
 }

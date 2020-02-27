@@ -12,7 +12,7 @@ import Alamofire
 class TestService {
     static let _sharedInstance = TestService()
     lazy var _apiEnvironment: CTNetworkingAPIEnvironment = .Release
-    lazy var _sessionManager: SessionManager = SessionManager.default
+    lazy var _sessionManager: Session = Session.default
 }
 
 extension TestService : CTNetworkingService {
@@ -35,7 +35,7 @@ extension TestService : CTNetworkingService {
         }
     }
     
-    var sessionManager: SessionManager {
+    var sessionManager: Session {
         get {
             return _sessionManager
         }

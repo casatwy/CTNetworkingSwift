@@ -16,7 +16,6 @@ open class CTNetworkingBaseAPIManager : NSObject, CTNetworkingAPIManager {
     public weak var interceptor : CTNetworkingBaseAPIManagerInterceptor? = nil
     public weak var child : CTNetworkingBaseAPIManagerChild? = nil
 
-    public var response : DefaultDataResponse? = nil
     public var request : DataRequest? = nil
 
     public var isLoading : Bool = false
@@ -30,7 +29,6 @@ public protocol CTNetworkingAPIManager {
     var interceptor : CTNetworkingBaseAPIManagerInterceptor? { get set }
     var child : CTNetworkingBaseAPIManagerChild? { get set }
     
-    var response : DefaultDataResponse? { get set }
     var request : DataRequest? { get set }
     
     var isLoading : Bool { get set }

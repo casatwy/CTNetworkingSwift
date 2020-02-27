@@ -24,13 +24,16 @@ class ViewController: UIViewController {
         "API Manager",
     ]
     
-    lazy var sessionManager : SessionManager = {
-        let serverTrustPolicyManager = ServerTrustPolicyManager(policies: ["*":.pinCertificates(certificates: ServerTrustPolicy.certificates(), validateCertificateChain: true, validateHost: true)])
+    lazy var sessionManager : Session = {
+        
+        var certificates:[SecCertificate] = Bundle.main.af.certificates
+        let manager = ServerTrustManager(evaluators: ["*":PinnedCertificatesTrustEvaluator(acceptSelfSignedCertificates:true)])
+        
         let configuration = URLSessionConfiguration.default
         var protocolClasses = configuration.protocolClasses
         protocolClasses?.insert(CTNetworkingProtocol.self, at: 0)
         configuration.protocolClasses = protocolClasses
-        let sessionManager = SessionManager(configuration: configuration, delegate: SessionDelegate(), serverTrustPolicyManager: serverTrustPolicyManager)
+        let sessionManager = Session(configuration: configuration, serverTrustManager: manager)
         return sessionManager
     }()
     
