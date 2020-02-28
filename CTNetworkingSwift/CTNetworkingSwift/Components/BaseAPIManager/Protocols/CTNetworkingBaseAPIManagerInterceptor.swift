@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-public protocol CTNetworkingBaseAPIManagerInterceptor : CTNetworkingAPIManager {
+public protocol CTNetworkingBaseAPIManagerInterceptor : AnyObject {
     func beforePerformSuccess(_ apiManager:CTNetworkingAPIManager) -> Bool
     func afterPerformSuccess(_ apiManager:CTNetworkingAPIManager)
     

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CTNetworkingSwift"
-  s.version      = "16"
+  s.version      = "17"
   s.summary      = "CTNetworkingSwift."
   s.swift_version= "4.2"
 
