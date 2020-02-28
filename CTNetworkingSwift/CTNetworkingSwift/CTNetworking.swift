@@ -9,12 +9,6 @@ import Foundation
 
 public typealias ParamsType = [String:Any]
 
-public enum CTNetworkingAPIEnvironment : Int {
-    case Develop = 0
-    case preRelease = 1
-    case Release = 2
-}
-
 public enum CTNetworkingErrorType {
     
     case defaultStatus

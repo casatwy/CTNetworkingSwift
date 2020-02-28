@@ -16,7 +16,8 @@ open class CTNetworkingBaseAPIManager : NSObject, CTNetworkingAPIManager {
     public weak var interceptor : CTNetworkingBaseAPIManagerInterceptor? = nil
     public weak var child : CTNetworkingBaseAPIManagerChild? = nil
 
-    public var request : DataRequest? = nil
+    public var request : URLRequest? = nil
+    public var response : AFDataResponse<Data?>? = nil
 
     public var isLoading : Bool = false
     public let managerIdentifier = UUID().uuidString
@@ -29,7 +30,8 @@ public protocol CTNetworkingAPIManager {
     var interceptor : CTNetworkingBaseAPIManagerInterceptor? { get set }
     var child : CTNetworkingBaseAPIManagerChild? { get set }
     
-    var request : DataRequest? { get set }
+    var request : URLRequest? { get set }
+    var response : AFDataResponse<Data?>? { get set }
     
     var isLoading : Bool { get set }
 }

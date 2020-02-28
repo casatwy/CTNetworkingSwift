@@ -14,17 +14,6 @@ extension URLRequest {
         
         var logString = "\n\n***********************\nRequest Start\n***********************\n\n"
 
-        var environmentString = ""
-        switch service.apiEnvironment {
-        case .Develop:
-            environmentString = "Develop"
-        case .preRelease:
-            environmentString = "preRelease"
-        case .Release:
-            environmentString = "Release"
-        }
-        
-        logString += "Environment:\t\(environmentString)\n"
         logString += "API Name:\t\t\(apiName)\n"
         logString += "Method:\t\t\t\(httpMethod ?? "N/A")\n"
         logString += "Service:\t\t\(type(of: service))\n"

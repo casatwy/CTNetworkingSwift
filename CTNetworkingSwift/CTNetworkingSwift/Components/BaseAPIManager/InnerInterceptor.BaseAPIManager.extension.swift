@@ -9,30 +9,30 @@
 import Foundation
 
 extension CTNetworkingBaseAPIManager {
-    @objc open func beforePerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
+    func beforePerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
         let result = interceptor?.beforePerformSuccess(self) ?? true
         return result
     }
-    @objc open func afterPerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) {
+    func afterPerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) {
         interceptor?.afterPerformSuccess(self)
     }
     
-    @objc open func beforePerformFail(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
+    func beforePerformFail(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
         let result = interceptor?.beforePerformFail(self) ?? true
         return result
     }
-    @objc open func afterPerformFail(_ apiManager:CTNetworkingBaseAPIManager) {
+    func afterPerformFail(_ apiManager:CTNetworkingBaseAPIManager) {
         interceptor?.afterPerformFail(self)
     }
     
-    @objc open func shouldCallAPI(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) -> Bool {
+    func shouldCallAPI(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) -> Bool {
         let result = interceptor?.shouldCallAPI(self, params: params) ?? true
         return result
     }
-    @objc open func afterAPICalling(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) {
+    func afterAPICalling(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) {
         interceptor?.afterAPICalling(self, params: params)
     }
-    @objc open func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager) {
+    func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager) {
         interceptor?.didReceiveResponse(self)
     }
 }

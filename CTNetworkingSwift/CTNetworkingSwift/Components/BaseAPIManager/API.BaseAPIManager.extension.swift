@@ -12,7 +12,7 @@ public protocol CTNetworkingAPIManagerCallable : CTNetworkingAPIManager {
 }
 
 extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
-    @objc open func loadData() {
+    public func loadData() {
 
         let params = paramSource?.params(for: self)
         
@@ -24,21 +24,28 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
         guard shouldCallAPI(self, params: params) else { return }
 
         guard let _child = child else { return }
-        let request = _child.service.request(params: params, methodName: _child.methodName, requestType: _child.requestType)
-        debugPrint(request)
-        
-        if let request = request.request {
-            print(request.logString(apiName: _child.methodName, service: _child.service))
+        guard let request = _child.service.request(params: params, methodName: _child.methodName, requestType: _child.requestType) else {
+            return
         }
+        self.request = request
         
+        #if DEBUG
+        print(request.logString(apiName: _child.methodName, service: _child.service))
+        #endif
+
         isLoading = true
-        request.response { (response) in
-            self.isLoading = false
+        
+        _child.service.session.request(request).response { (response) in
+            #if DEBUG
+            print(response.logString())
+            #endif
             
-            self.didReceiveResponse(self)
+            self.isLoading = false
+            self.response = response
+            self.interceptor?.didReceiveResponse(self)
 
             guard _child.service.handleCommonError(self) else { return }
-            
+
             if response.error == nil {
                 if self.validator?.isCorrect(manager: self) != CTNetworkingErrorType.Response.correct {
                     self.fail()
@@ -49,7 +56,7 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
                 self.fail()
             }
         }
-        
+
         afterAPICalling(self, params: params)
     }
 }

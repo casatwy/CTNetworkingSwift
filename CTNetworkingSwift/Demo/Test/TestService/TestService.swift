@@ -10,40 +10,24 @@ import UIKit
 import Alamofire
 
 class TestService {
-    static let _sharedInstance = TestService()
-    lazy var _apiEnvironment: CTNetworkingAPIEnvironment = .Release
-    lazy var _sessionManager: Session = Session.default
+    static let sharedInstance: CTNetworkingService = TestService()
+    lazy var _session: Session = Session.default
 }
 
 extension TestService : CTNetworkingService {
-
-    static var sharedInstance: CTNetworkingService {
-        get {
-            return _sharedInstance
-        }
-        set {
-            // do nothing
-        }
-    }
-
-    var apiEnvironment: CTNetworkingAPIEnvironment {
-        get {
-            return _apiEnvironment
-        }
-        set(newValue) {
-            _apiEnvironment = newValue
-        }
+    var session: Session {
+        return _session
     }
     
-    var sessionManager: Session {
-        get {
-            return _sessionManager
-        }
+    static var shared: CTNetworkingService {
+        return TestService.sharedInstance
     }
-
-    func request(params: ParamsType?, methodName: String, requestType: HTTPMethod) -> DataRequest {
+    
+    func request(params: ParamsType?, methodName: String, requestType: HTTPMethod) -> URLRequest? {
         // need return DataRequest
-        return sessionManager.request("https://casatwy.com")
+        guard let url = URL(string: "https://dual-https.casatwy.com/sample") else { return nil }
+        let request = URLRequest(url: url)
+        return request
     }
     
     func handleCommonError(_ apiManager: CTNetworkingBaseAPIManager) -> Bool {

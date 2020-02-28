@@ -17,7 +17,7 @@ public protocol CTNetworkingAPIManagerFetchable : CTNetworkingAPIManager {
 
 extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerFetchable {
     public func fetch(reformer:CTNetworkingReformer?) -> Any? {
-        guard let data = self.request?.data else { return nil }
+        guard let data = self.response?.data else { return nil }
         guard let reformer = reformer else {
             if let result = try? JSON(data: data) {
                 return result
@@ -31,16 +31,16 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerFetchable {
     }
     
     public func fetchAsData() -> Data? {
-        return self.request?.data
+        return self.response?.data
     }
     
     public func fetchAsString() -> String? {
-        guard let data = self.request?.data else { return nil }
+        guard let data = self.response?.data else { return nil }
         return String(data: data, encoding: .utf8)
     }
     
     public func fetchAsJSON() -> JSON? {
-        guard let data = self.request?.data else { return nil }
+        guard let data = self.response?.data else { return nil }
         let result = try? JSON(data: data)
         return result
     }
