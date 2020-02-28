@@ -8,14 +8,14 @@
 import Foundation
 import SwiftyJSON
 
-public protocol CTNetworkingAPIManagerFetchable : CTNetworkingAPIManager {
+public protocol CTNetworkingAPIManagerFetchable {
     func fetch(reformer:CTNetworkingReformer?) -> Any?
     func fetchAsData() -> Data?
     func fetchAsString() -> String?
     func fetchAsJSON() -> JSON?
 }
 
-extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerFetchable {
+extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
     public func fetch(reformer:CTNetworkingReformer?) -> Any? {
         guard let data = self.response?.data else { return nil }
         guard let reformer = reformer else {

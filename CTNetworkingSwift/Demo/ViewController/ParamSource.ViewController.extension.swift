@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension ViewController : CTNetworkingBaseAPIManagerParamSource {
-    func params(for apiManager: CTNetworkingBaseAPIManager) -> ParamsType? {
+extension ViewController : CTNetworkingAPIManagerParamSource {
+    func params(for apiManager: CTNetworkingAPIManager) -> ParamsType? {
         return nil
     }
 }

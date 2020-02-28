@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A02B6602408E40D00A761DF /* Service.CTMediator.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B65F2408E40D00A761DF /* Service.CTMediator.Extension.swift */; };
+		4A02B6622408E4D700A761DF /* ServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6612408E4D700A761DF /* ServiceTarget.swift */; };
 		4A22E83F215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22E83E215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift */; };
 		4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */; };
 		4A460E7F215DEC3700C98571 /* Debug.Response.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */; };
@@ -22,7 +24,7 @@
 		4A9374B4215BDD4D00B88CB8 /* CTNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937498215BDD4D00B88CB8 /* CTNetworking.swift */; };
 		4A9374B5215BDD4D00B88CB8 /* API.BaseAPIManager.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749B215BDD4D00B88CB8 /* API.BaseAPIManager.extension.swift */; };
 		4A9374B6215BDD4D00B88CB8 /* Reformer.BaseAPIManager.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749C215BDD4D00B88CB8 /* Reformer.BaseAPIManager.extension.swift */; };
-		4A9374B7215BDD4D00B88CB8 /* CTNetworkingBaseAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749D215BDD4D00B88CB8 /* CTNetworkingBaseAPIManager.swift */; };
+		4A9374B7215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749D215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift */; };
 		4A9374B8215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerParamSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749F215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerParamSource.swift */; };
 		4A9374B9215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9374A0215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerInterceptor.swift */; };
 		4A9374BA215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9374A1215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerValidator.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		0B21A842E0906B61311AD2E9 /* Pods_CTNetworkingSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTNetworkingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A02B65F2408E40D00A761DF /* Service.CTMediator.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.CTMediator.Extension.swift; sourceTree = "<group>"; };
+		4A02B6612408E4D700A761DF /* ServiceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTarget.swift; sourceTree = "<group>"; };
 		4A22E83E215F6FAC00109F7A /* CTNetworkingAPIManagerPagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTNetworkingAPIManagerPagable.swift; sourceTree = "<group>"; };
 		4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Request.extension.swift; sourceTree = "<group>"; };
 		4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Response.Extension.swift; sourceTree = "<group>"; };
@@ -54,7 +58,7 @@
 		4A937498215BDD4D00B88CB8 /* CTNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworking.swift; sourceTree = "<group>"; };
 		4A93749B215BDD4D00B88CB8 /* API.BaseAPIManager.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.BaseAPIManager.extension.swift; sourceTree = "<group>"; };
 		4A93749C215BDD4D00B88CB8 /* Reformer.BaseAPIManager.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reformer.BaseAPIManager.extension.swift; sourceTree = "<group>"; };
-		4A93749D215BDD4D00B88CB8 /* CTNetworkingBaseAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingBaseAPIManager.swift; sourceTree = "<group>"; };
+		4A93749D215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingAPIManager.swift; sourceTree = "<group>"; };
 		4A93749F215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerParamSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingBaseAPIManagerParamSource.swift; sourceTree = "<group>"; };
 		4A9374A0215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingBaseAPIManagerInterceptor.swift; sourceTree = "<group>"; };
 		4A9374A1215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingBaseAPIManagerValidator.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			children = (
 				4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */,
 				4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */,
+				4A02B65F2408E40D00A761DF /* Service.CTMediator.Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		4A937489215BDD4D00B88CB8 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				4A02B6612408E4D700A761DF /* ServiceTarget.swift */,
 				4A93748C215BDD4D00B88CB8 /* TestService */,
 				4A93748E215BDD4D00B88CB8 /* TestAPIManager */,
 			);
@@ -171,7 +177,7 @@
 		4A93749A215BDD4D00B88CB8 /* BaseAPIManager */ = {
 			isa = PBXGroup;
 			children = (
-				4A93749D215BDD4D00B88CB8 /* CTNetworkingBaseAPIManager.swift */,
+				4A93749D215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift */,
 				4A93749B215BDD4D00B88CB8 /* API.BaseAPIManager.extension.swift */,
 				4A93749C215BDD4D00B88CB8 /* Reformer.BaseAPIManager.extension.swift */,
 				4A9374A4215BDD4D00B88CB8 /* Callback.BaseAPIManager.extension.swift */,
@@ -360,6 +366,7 @@
 			files = (
 				4A9374B4215BDD4D00B88CB8 /* CTNetworking.swift in Sources */,
 				4A9374BE215BDD4D00B88CB8 /* ServiceProtocol.swift in Sources */,
+				4A02B6622408E4D700A761DF /* ServiceTarget.swift in Sources */,
 				4A460E7F215DEC3700C98571 /* Debug.Response.Extension.swift in Sources */,
 				4A9374B3215BDD4D00B88CB8 /* LifeCycle.ViewController.extension.swift in Sources */,
 				4AAF5822215BDB5C009E312E /* AppDelegate.swift in Sources */,
@@ -370,11 +377,12 @@
 				4A9374AD215BDD4D00B88CB8 /* TestAPIManager.swift in Sources */,
 				4A9374BD215BDD4D00B88CB8 /* Callback.BaseAPIManager.extension.swift in Sources */,
 				4A8A12A0215FD4AD004A35BE /* InnerInterceptor.BaseAPIManager.extension.swift in Sources */,
+				4A02B6602408E40D00A761DF /* Service.CTMediator.Extension.swift in Sources */,
 				4A9374BB215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerCallbackDelegate.swift in Sources */,
 				4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */,
 				4A9374B1215BDD4D00B88CB8 /* ParamSource.ViewController.extension.swift in Sources */,
 				4A9374B5215BDD4D00B88CB8 /* API.BaseAPIManager.extension.swift in Sources */,
-				4A9374B7215BDD4D00B88CB8 /* CTNetworkingBaseAPIManager.swift in Sources */,
+				4A9374B7215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift in Sources */,
 				4A9374BA215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerValidator.swift in Sources */,
 				4A9374B9215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerInterceptor.swift in Sources */,
 				4A9374AE215BDD4D00B88CB8 /* CTNetworkingProtocol.swift in Sources */,

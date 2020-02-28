@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol CTNetworkingAPIManagerPagable : AnyObject, CTNetworkingAPIManagerCallable, CTNetworkingAPIManagerFetchable {
+public protocol CTNetworkingAPIManagerPagable : CTNetworkingAPIManager {
     var pageSize : Int { get }
     var isLastPage : Bool { get }
     var isFirstPage : Bool { get }

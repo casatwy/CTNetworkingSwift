@@ -8,15 +8,15 @@
 
 import Foundation
 
-extension ViewController : CTNetworkingBaseAPIManagerCallbackDelegate {
-    func requestDidSuccess(_ apiManager: CTNetworkingBaseAPIManager) {
+extension ViewController : CTNetworkingAPIManagerCallbackDelegate {
+    func requestDidSuccess(_ apiManager: CTNetworkingAPIManager) {
         print("success")
         guard let result = apiManager.fetchAsJSON() else { return }
         debugPrint(result)
         debugPrint(result["hello"])
     }
     
-    func requestDidFailed(_ apiManager: CTNetworkingBaseAPIManager) {
+    func requestDidFailed(_ apiManager: CTNetworkingAPIManager) {
         print("fail")
     }
 }

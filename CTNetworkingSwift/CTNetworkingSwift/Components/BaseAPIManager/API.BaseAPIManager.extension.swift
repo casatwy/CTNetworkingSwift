@@ -6,12 +6,13 @@
 //
 
 import Alamofire
+import CTMediator
 
-public protocol CTNetworkingAPIManagerCallable : CTNetworkingAPIManager {
+public protocol CTNetworkingAPIManagerCallable {
     func loadData()
 }
 
-extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
+extension CTNetworkingAPIManager : CTNetworkingAPIManagerCallable {
     public func loadData() {
 
         let params = paramSource?.params(for: self)
@@ -24,18 +25,20 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
         guard shouldCallAPI(self, params: params) else { return }
 
         guard let _child = child else { return }
-        guard let request = _child.service.request(params: params, methodName: _child.methodName, requestType: _child.requestType) else {
+        guard let service = CTMediator.sharedInstance()?.fetchCTNetworkingService(identifier: _child.identifier, moduleName: _child.moduleName) else { return }
+        
+        guard let request = service.request(params: params, methodName: _child.methodName, requestType: _child.requestType) else {
             return
         }
         self.request = request
         
         #if DEBUG
-        print(request.logString(apiName: _child.methodName, service: _child.service))
+        print(request.logString(apiName: _child.methodName, service: service))
         #endif
 
         isLoading = true
         
-        _child.service.session.request(request).response { (response) in
+        service.session.request(request).response { (response) in
             #if DEBUG
             print(response.logString())
             #endif
@@ -44,7 +47,7 @@ extension CTNetworkingBaseAPIManager : CTNetworkingAPIManagerCallable {
             self.response = response
             self.interceptor?.didReceiveResponse(self)
 
-            guard _child.service.handleCommonError(self) else { return }
+            guard service.handleCommonError(self) else { return }
 
             if response.error == nil {
                 if self.validator?.isCorrect(manager: self) != CTNetworkingErrorType.Response.correct {

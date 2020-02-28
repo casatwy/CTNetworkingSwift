@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class TestAPIManager: CTNetworkingBaseAPIManager {
+class TestAPIManager: CTNetworkingAPIManager {
     override init() {
         super.init()
         child = self
@@ -17,9 +17,9 @@ class TestAPIManager: CTNetworkingBaseAPIManager {
     }
 }
 
-extension TestAPIManager: CTNetworkingBaseAPIManagerValidator{}
+extension TestAPIManager: CTNetworkingAPIManagerValidator{}
 
-extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
+extension TestAPIManager : CTNetworkingAPIManagerChild {
     var isPagable: Bool {
         return false
     }
@@ -32,9 +32,11 @@ extension TestAPIManager : CTNetworkingBaseAPIManagerChild {
         return .get
     }
     
-    var service : CTNetworkingService {
-        get {
-            return TestService.sharedInstance
-        }
+    var identifier: String {
+        return "TestService"
+    }
+
+    var moduleName: String {
+        return "CTNetworkingSwift"
     }
 }

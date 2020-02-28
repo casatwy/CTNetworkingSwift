@@ -8,44 +8,44 @@
 import Foundation
 import Alamofire
 
-public protocol CTNetworkingBaseAPIManagerInterceptor : AnyObject {
-    func beforePerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) -> Bool
-    func afterPerformSuccess(_ apiManager:CTNetworkingBaseAPIManager)
+public protocol CTNetworkingBaseAPIManagerInterceptor : CTNetworkingAPIManager {
+    func beforePerformSuccess(_ apiManager:CTNetworkingAPIManager) -> Bool
+    func afterPerformSuccess(_ apiManager:CTNetworkingAPIManager)
     
-    func beforePerformFail(_ apiManager:CTNetworkingBaseAPIManager) -> Bool
-    func afterPerformFail(_ apiManager:CTNetworkingBaseAPIManager)
+    func beforePerformFail(_ apiManager:CTNetworkingAPIManager) -> Bool
+    func afterPerformFail(_ apiManager:CTNetworkingAPIManager)
     
-    func shouldCallAPI(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) -> Bool
-    func afterAPICalling(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?)
-    func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager)
+    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) -> Bool
+    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:ParamsType?)
+    func didReceiveResponse(_ apiManager:CTNetworkingAPIManager)
 }
 
 public extension CTNetworkingBaseAPIManagerInterceptor {
-    func beforePerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
+    func beforePerformSuccess(_ apiManager:CTNetworkingAPIManager) -> Bool {
         return true
     }
     
-    func afterPerformSuccess(_ apiManager:CTNetworkingBaseAPIManager) {
+    func afterPerformSuccess(_ apiManager:CTNetworkingAPIManager) {
         // do nothing
     }
     
-    func beforePerformFail(_ apiManager:CTNetworkingBaseAPIManager) -> Bool {
+    func beforePerformFail(_ apiManager:CTNetworkingAPIManager) -> Bool {
         return true
     }
     
-    func afterPerformFail(_ apiManager:CTNetworkingBaseAPIManager) {
+    func afterPerformFail(_ apiManager:CTNetworkingAPIManager) {
         // do nothing
     }
     
-    func shouldCallAPI(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) -> Bool {
+    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) -> Bool {
         return true
     }
     
-    func afterAPICalling(_ apiManager:CTNetworkingBaseAPIManager, params:ParamsType?) {
+    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) {
         // do nothing
     }
     
-    func didReceiveResponse(_ apiManager:CTNetworkingBaseAPIManager) {
+    func didReceiveResponse(_ apiManager:CTNetworkingAPIManager) {
         // do nothing
     }
 }

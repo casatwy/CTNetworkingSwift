@@ -9,20 +9,11 @@
 import UIKit
 import Alamofire
 
-class TestService {
-    static let sharedInstance: CTNetworkingService = TestService()
-    lazy var _session: Session = Session.default
-}
+class TestService : CTNetworkingService {
+    static let shared: CTNetworkingService = TestService()
+    
+    lazy var session: Session = Session.default
 
-extension TestService : CTNetworkingService {
-    var session: Session {
-        return _session
-    }
-    
-    static var shared: CTNetworkingService {
-        return TestService.sharedInstance
-    }
-    
     func request(params: ParamsType?, methodName: String, requestType: HTTPMethod) -> URLRequest? {
         // need return DataRequest
         guard let url = URL(string: "https://dual-https.casatwy.com/sample") else { return nil }
@@ -30,7 +21,7 @@ extension TestService : CTNetworkingService {
         return request
     }
     
-    func handleCommonError(_ apiManager: CTNetworkingBaseAPIManager) -> Bool {
+    func handleCommonError(_ apiManager: CTNetworkingAPIManager) -> Bool {
         return true
     }
 }

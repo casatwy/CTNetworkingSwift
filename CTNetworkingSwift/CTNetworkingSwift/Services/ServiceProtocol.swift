@@ -10,7 +10,6 @@ import Alamofire
 
 public protocol CTNetworkingService {
     var session : Session { get }
-    static var shared : CTNetworkingService { get }
     func request(params:ParamsType?, methodName:String, requestType:HTTPMethod) -> URLRequest?
-    func handleCommonError(_ apiManager:CTNetworkingBaseAPIManager) -> Bool
+    func handleCommonError(_ apiManager:CTNetworkingAPIManager) -> Bool
 }

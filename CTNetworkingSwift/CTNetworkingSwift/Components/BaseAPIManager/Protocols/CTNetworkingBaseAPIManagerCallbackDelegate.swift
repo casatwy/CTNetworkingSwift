@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol CTNetworkingBaseAPIManagerCallbackDelegate : AnyObject {
-    func requestDidSuccess(_ apiManager:CTNetworkingBaseAPIManager)
-    func requestDidFailed(_ apiManager:CTNetworkingBaseAPIManager)
+public protocol CTNetworkingAPIManagerCallbackDelegate : AnyObject {
+    func requestDidSuccess(_ apiManager:CTNetworkingAPIManager)
+    func requestDidFailed(_ apiManager:CTNetworkingAPIManager)
 }

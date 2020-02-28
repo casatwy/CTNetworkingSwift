@@ -7,8 +7,9 @@
 
 import Alamofire
 
-public protocol CTNetworkingBaseAPIManagerChild : AnyObject, CTNetworkingAPIManager {
-    var service : CTNetworkingService { get }
+public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
+    var identifier : String { get }
+    var moduleName : String { get }
     var isPagable : Bool { get }
     var methodName : String { get }
     var requestType : HTTPMethod { get }

@@ -7,7 +7,7 @@
 
 import Alamofire
 
-extension CTNetworkingBaseAPIManager {
+extension CTNetworkingAPIManager {
     func success() {
         guard beforePerformSuccess(self) else { return }
         delegate?.requestDidSuccess(self)
