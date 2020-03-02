@@ -13,4 +13,11 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var isPagable : Bool { get }
     var methodName : String { get }
     var requestType : HTTPMethod { get }
+    func reformParams(_ params:ParamsType?) -> ParamsType?
+}
+
+public extension CTNetworkingAPIManagerChild {
+    func reformParams(_ params:ParamsType?) -> ParamsType? {
+        return params
+    }
 }
