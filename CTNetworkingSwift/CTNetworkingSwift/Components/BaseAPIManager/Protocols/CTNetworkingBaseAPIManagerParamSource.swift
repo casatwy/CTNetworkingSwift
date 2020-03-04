@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Alamofire
+import AnyCodable
 
 public protocol CTNetworkingAPIManagerParamSource : AnyObject {
-    func params(for apiManager:CTNetworkingAPIManager) -> ParamsType?
+    func params(for apiManager:CTNetworkingAPIManager) -> [String:AnyEncodable]?
 }

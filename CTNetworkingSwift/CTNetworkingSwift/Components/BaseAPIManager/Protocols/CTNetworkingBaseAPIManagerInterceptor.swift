@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import AnyCodable
 
 public protocol CTNetworkingBaseAPIManagerInterceptor : AnyObject {
     func beforePerformSuccess(_ apiManager:CTNetworkingAPIManager) -> Bool
@@ -15,8 +16,8 @@ public protocol CTNetworkingBaseAPIManagerInterceptor : AnyObject {
     func beforePerformFail(_ apiManager:CTNetworkingAPIManager) -> Bool
     func afterPerformFail(_ apiManager:CTNetworkingAPIManager)
     
-    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) -> Bool
-    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:ParamsType?)
+    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:[String:AnyEncodable]?) -> Bool
+    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:[String:AnyEncodable]?)
     func didReceiveResponse(_ apiManager:CTNetworkingAPIManager)
 }
 
@@ -37,11 +38,11 @@ public extension CTNetworkingBaseAPIManagerInterceptor {
         // do nothing
     }
     
-    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) -> Bool {
+    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:[String:AnyEncodable]?) -> Bool {
         return true
     }
     
-    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) {
+    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:[String:AnyEncodable]?) {
         // do nothing
     }
     

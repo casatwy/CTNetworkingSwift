@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import AnyCodable
 
 extension ViewController : CTNetworkingAPIManagerParamSource {
-    func params(for apiManager: CTNetworkingAPIManager) -> ParamsType? {
+    func params(for apiManager: CTNetworkingAPIManager) -> [String:AnyEncodable]? {
         return nil
     }
 }

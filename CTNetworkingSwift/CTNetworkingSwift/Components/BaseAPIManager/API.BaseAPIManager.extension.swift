@@ -27,7 +27,7 @@ extension CTNetworkingAPIManager : CTNetworkingAPIManagerCallable {
         
         guard shouldCallAPI(self, params: params) else { return }
 
-        guard let service = CTMediator.sharedInstance()?.fetchCTNetworkingService(identifier: _child.identifier, moduleName: _child.moduleName) else { return }
+        guard let service = CTMediator.sharedInstance().fetchCTNetworkingService(identifier: _child.identifier, moduleName: _child.moduleName) else { return }
         
         guard let request = service.request(params: params, methodName: _child.methodName, requestType: _child.requestType) else {
             return

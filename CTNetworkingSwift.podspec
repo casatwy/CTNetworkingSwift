@@ -137,5 +137,6 @@ Pod::Spec.new do |s|
   s.dependency "CTMediator"
   s.dependency "Alamofire"
   s.dependency "SwiftyJSON"
+  s.dependency "AnyCodable-FlightSchool"
 
 end

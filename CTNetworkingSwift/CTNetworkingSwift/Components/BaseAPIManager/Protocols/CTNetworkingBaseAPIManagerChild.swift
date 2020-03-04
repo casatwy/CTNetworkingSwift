@@ -6,6 +6,7 @@
 //
 
 import Alamofire
+import AnyCodable
 
 public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var identifier : String { get }
@@ -13,11 +14,11 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var isPagable : Bool { get }
     var methodName : String { get }
     var requestType : HTTPMethod { get }
-    func reformParams(_ params:ParamsType?) -> ParamsType?
+    func reformParams(_ params:[String:AnyEncodable]?) -> [String:AnyEncodable]?
 }
 
 public extension CTNetworkingAPIManagerChild {
-    func reformParams(_ params:ParamsType?) -> ParamsType? {
+    func reformParams(_ params:[String:AnyEncodable]?) -> [String:AnyEncodable]? {
         return params
     }
 }

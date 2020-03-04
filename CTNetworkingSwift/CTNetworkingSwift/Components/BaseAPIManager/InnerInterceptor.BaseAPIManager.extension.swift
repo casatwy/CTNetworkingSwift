@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+import AnyCodable
 
 extension CTNetworkingAPIManager {
     func beforePerformSuccess(_ apiManager:CTNetworkingAPIManager) -> Bool {
@@ -25,11 +27,11 @@ extension CTNetworkingAPIManager {
         interceptor?.afterPerformFail(self)
     }
     
-    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) -> Bool {
+    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:[String:AnyEncodable]?) -> Bool {
         let result = interceptor?.shouldCallAPI(self, params: params) ?? true
         return result
     }
-    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:ParamsType?) {
+    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:[String:AnyEncodable]?) {
         interceptor?.afterAPICalling(self, params: params)
     }
     func didReceiveResponse(_ apiManager:CTNetworkingAPIManager) {

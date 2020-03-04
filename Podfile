@@ -8,6 +8,7 @@ target 'CTNetworkingSwift' do
   # Pods for CTNetworkingSwift
   pod "Alamofire"
   pod "SwiftyJSON"
+  pod "AnyCodable-FlightSchool"
 
   # Private Pods
   pod "SwiftHandyFrame"

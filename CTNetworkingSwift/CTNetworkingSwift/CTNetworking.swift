@@ -7,8 +7,6 @@
 
 import Foundation
 
-public typealias ParamsType = [String:Any]
-
 public enum CTNetworkingErrorType {
     
     case defaultStatus
