@@ -8,14 +8,13 @@
 
 import UIKit
 import Alamofire
-import AnyCodable
 
 class TestService : CTNetworkingService {
     static let shared: CTNetworkingService = TestService()
     
     lazy var session: Session = Session.default
 
-    func request(params: [String:AnyEncodable]?, methodName: String, requestType: HTTPMethod) -> URLRequest? {
+    func request(params: Parameters?, methodName: String, requestType: HTTPMethod) -> URLRequest? {
         // need return DataRequest
         guard let url = URL(string: "https://dual-https.casatwy.com/sample") else { return nil }
         let request = URLRequest(url: url)

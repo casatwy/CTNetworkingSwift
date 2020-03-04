@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import AnyCodable
+import Alamofire
 
 extension ViewController : CTNetworkingAPIManagerParamSource {
-    func params(for apiManager: CTNetworkingAPIManager) -> [String:AnyEncodable]? {
+    func params(for apiManager: CTNetworkingAPIManager) -> Parameters? {
         return nil
     }
 }

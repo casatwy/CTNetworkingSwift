@@ -7,15 +7,14 @@
 
 import Foundation
 import Alamofire
-import AnyCodable
 
 public protocol CTNetworkingAPIManagerValidator : AnyObject {
-    func isCorrect(manager:CTNetworkingAPIManager, params:[String:AnyEncodable]?) -> CTNetworkingErrorType.Params
+    func isCorrect(manager:CTNetworkingAPIManager, params:Parameters?) -> CTNetworkingErrorType.Params
     func isCorrect(manager:CTNetworkingAPIManager) -> CTNetworkingErrorType.Response
 }
 
 extension CTNetworkingAPIManagerValidator {
-    func isCorrect(manager:CTNetworkingAPIManager, params:[String:AnyEncodable]?) -> CTNetworkingErrorType.Params {
+    func isCorrect(manager:CTNetworkingAPIManager, params:Parameters?) -> CTNetworkingErrorType.Params {
         return .correct
     }
     

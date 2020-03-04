@@ -1,32 +1,32 @@
 PODS:
   - Alamofire (5.0.2)
-  - AnyCodable-FlightSchool (0.2.3)
   - CTMediator (26)
+  - Requests (0.3.2)
   - SwiftHandyFrame (12)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - AnyCodable-FlightSchool
   - CTMediator
+  - Requests
   - SwiftHandyFrame
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AnyCodable-FlightSchool
     - CTMediator
+    - Requests
     - SwiftHandyFrame
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
-  AnyCodable-FlightSchool: cf53737f4bd1d9187cea453679734506e478fff3
   CTMediator: 22d631107cb27f2c792c766e50e580ef35530c36
+  Requests: 3b1545e8be05862bfa7cc31eff29c77ba8494fd1
   SwiftHandyFrame: 6d648e53a5b8b548ad87c4829e6ed646041f3fc7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 86f205423d8bbe2f7b2a80ed9b92e1be6e16daaf
+PODFILE CHECKSUM: 6e10a6e6754eb5f1298fe4eacc0cb5a7d3264b71
 
 COCOAPODS: 1.9.0
