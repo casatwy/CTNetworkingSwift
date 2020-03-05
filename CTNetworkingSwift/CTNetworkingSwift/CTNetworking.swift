@@ -37,6 +37,6 @@ public enum CTNetworkingErrorType {
     
 }
 
-public protocol CTNetworkingReformer {
-    func reform(apiManager:CTNetworkingAPIManager) -> Any?
+public protocol CTNetworkingResponseTransformer {
+    func transformResponse(from apiManager:CTNetworkingAPIManager) -> Any?
 }

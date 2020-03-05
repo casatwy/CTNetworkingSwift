@@ -9,16 +9,16 @@ import Foundation
 import SwiftyJSON
 
 public protocol CTNetworkingAPIManagerFetchable {
-    func fetch(reformer:CTNetworkingReformer?) -> Any?
+    func fetch(with responseTransformer:CTNetworkingResponseTransformer?) -> Any?
     func fetchAsData() -> Data?
     func fetchAsString() -> String?
     func fetchAsJSON() -> JSON?
 }
 
 extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
-    public func fetch(reformer:CTNetworkingReformer?) -> Any? {
+    public func fetch(with responseTransformer:CTNetworkingResponseTransformer?) -> Any? {
         guard let data = self.response?.data else { return nil }
-        guard let reformer = reformer else {
+        guard let transformer = responseTransformer else {
             if let result = try? JSON(data: data) {
                 return result
             } else if let result = String(data: data, encoding: .utf8) {
@@ -27,7 +27,7 @@ extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
                 return data
             }
         }
-        return reformer.reform(apiManager: self)
+        return transformer.transformResponse(from: self)
     }
     
     public func fetchAsData() -> Data? {

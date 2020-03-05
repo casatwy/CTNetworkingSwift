@@ -37,11 +37,11 @@ public extension CTNetworkingBaseAPIManagerInterceptor {
         // do nothing
     }
     
-    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:Parameters?) -> Bool {
+    func shouldCallAPI(_ apiManager:CTNetworkingAPIManager, params:Parameters) -> Bool {
         return true
     }
     
-    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:Parameters?) {
+    func afterAPICalling(_ apiManager:CTNetworkingAPIManager, params:Parameters) {
         // do nothing
     }
     

@@ -17,8 +17,7 @@ extension CTNetworkingAPIManager : CTNetworkingAPIManagerCallable {
         
         guard let _child = child else { return }
 
-        var params = paramSource?.params(for: self)
-        params = _child.reformParams(params)
+        let params = _child.transformParams(paramSource?.params(for: self))
 
         guard validator?.isCorrect(manager: self, params: params) == CTNetworkingErrorType.Params.correct else {
             fail()
