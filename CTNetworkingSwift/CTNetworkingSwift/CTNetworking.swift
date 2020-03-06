@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 public enum CTNetworkingErrorType {
     
@@ -39,4 +40,22 @@ public enum CTNetworkingErrorType {
 
 public protocol CTNetworkingResponseTransformer {
     func transformResponse(from apiManager:CTNetworkingAPIManager) -> Any?
+}
+
+public protocol CTNetworkingParamConvertible {
+    func toParameters() -> Parameters
+}
+
+public extension CTNetworkingParamConvertible {
+    func toParameters() -> Parameters {
+        var result:Parameters = [:]
+        let mirror = Mirror(reflecting: self)
+        for property in mirror.children {
+            guard let key = property.label else { continue }
+            if case Optional<Any>.some(let value) = property.value {
+                result[key] = value
+            }
+        }
+        return result
+    }
 }
