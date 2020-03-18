@@ -11,7 +11,7 @@ import Foundation
 extension ViewController : CTNetworkingAPIManagerCallbackDelegate {
     func requestDidSuccess(_ apiManager: CTNetworkingAPIManager) {
         print("success")
-        guard let result = apiManager.fetchAsJSON() else { return }
+        guard let result = apiManager.fetchAsDictionary() else { return }
         debugPrint(result)
         debugPrint(result["hello"])
     }

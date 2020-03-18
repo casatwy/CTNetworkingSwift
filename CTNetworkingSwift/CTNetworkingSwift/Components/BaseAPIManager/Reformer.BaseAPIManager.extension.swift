@@ -6,20 +6,19 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 public protocol CTNetworkingAPIManagerFetchable {
     func fetch(with responseTransformer:CTNetworkingResponseTransformer?) -> Any?
     func fetchAsData() -> Data?
     func fetchAsString() -> String?
-    func fetchAsJSON() -> JSON?
+    func fetchAsDictionary() -> [AnyHashable:Any]?
 }
 
 extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
     public func fetch(with responseTransformer:CTNetworkingResponseTransformer?) -> Any? {
         guard let data = self.response?.data else { return nil }
         guard let transformer = responseTransformer else {
-            if let result = try? JSON(data: data) {
+            if let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [AnyHashable:Any] {
                 return result
             } else if let result = String(data: data, encoding: .utf8) {
                 return result
@@ -39,9 +38,9 @@ extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
         return String(data: data, encoding: .utf8)
     }
     
-    public func fetchAsJSON() -> JSON? {
+    public func fetchAsDictionary() -> [AnyHashable:Any]? {
         guard let data = self.response?.data else { return nil }
-        let result = try? JSON(data: data)
+        let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [AnyHashable:Any]
         return result
     }
 }
