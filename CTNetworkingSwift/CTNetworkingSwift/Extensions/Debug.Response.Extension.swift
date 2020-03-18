@@ -16,6 +16,7 @@ extension DataResponse {
         guard let request = request else { return "No Request" }
 
         var logString = "\n\n=========================================\nAPI Response\n=========================================\n\n"
+        logString += "Headers:\(response.headers.dictionary)\n\n"
         logString += "Status:\t\(response.statusCode)\t\(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))\n\n"
 
         if let data = data {
