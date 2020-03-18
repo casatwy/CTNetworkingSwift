@@ -13,3 +13,5 @@ public protocol CTNetworkingService {
     func request(params:Parameters?, methodName:String, requestType:HTTPMethod) -> URLRequest?
     func handleCommonError(_ apiManager:CTNetworkingAPIManager) -> Bool
 }
+
+

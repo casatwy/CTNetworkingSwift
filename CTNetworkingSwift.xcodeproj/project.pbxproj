@@ -36,6 +36,7 @@
 		4AAF5827215BDB5C009E312E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF5825215BDB5C009E312E /* Main.storyboard */; };
 		4AAF5829215BDB5D009E312E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF5828215BDB5D009E312E /* Assets.xcassets */; };
 		4AAF582C215BDB5D009E312E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF582A215BDB5D009E312E /* LaunchScreen.storyboard */; };
+		4AFCFC522421CBF300334313 /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCFC512421CBF300334313 /* LoginServiceProtocol.swift */; };
 		B11A445306298D39E166C910 /* Pods_CTNetworkingSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B21A842E0906B61311AD2E9 /* Pods_CTNetworkingSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		4AAF5828215BDB5D009E312E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAF582B215BDB5D009E312E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AAF582D215BDB5D009E312E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AFCFC512421CBF300334313 /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
 		D6E59D57E0CC0C8DF4D88D77 /* Pods-CTNetworkingSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwift.release.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwift/Pods-CTNetworkingSwift.release.xcconfig"; sourceTree = "<group>"; };
 		F0CD37C17C880E7F3657CEEA /* Pods-CTNetworkingSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwift.debug.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwift/Pods-CTNetworkingSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				4A9374A6215BDD4D00B88CB8 /* ServiceProtocol.swift */,
+				4AFCFC512421CBF300334313 /* LoginServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				4A9374B1215BDD4D00B88CB8 /* ParamSource.ViewController.extension.swift in Sources */,
 				4A9374B5215BDD4D00B88CB8 /* API.BaseAPIManager.extension.swift in Sources */,
 				4A9374B7215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift in Sources */,
+				4AFCFC522421CBF300334313 /* LoginServiceProtocol.swift in Sources */,
 				4A9374BA215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerValidator.swift in Sources */,
 				4A9374B9215BDD4D00B88CB8 /* CTNetworkingBaseAPIManagerInterceptor.swift in Sources */,
 				4A9374AE215BDD4D00B88CB8 /* CTNetworkingProtocol.swift in Sources */,

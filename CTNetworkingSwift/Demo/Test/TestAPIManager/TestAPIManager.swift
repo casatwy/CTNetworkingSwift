@@ -20,6 +20,14 @@ class TestAPIManager: CTNetworkingAPIManager {
 extension TestAPIManager: CTNetworkingAPIManagerValidator{}
 
 extension TestAPIManager : CTNetworkingAPIManagerChild {
+    var serviceIdentifier: String {
+        return "TestService"
+    }
+    
+    var loginServiceIdentifier: String {
+        return "TestService"
+    }
+    
     var isPagable: Bool {
         return false
     }
@@ -32,10 +40,6 @@ extension TestAPIManager : CTNetworkingAPIManagerChild {
         return .get
     }
     
-    var identifier: String {
-        return "TestService"
-    }
-
     var moduleName: String {
         return "CTNetworkingSwift"
     }

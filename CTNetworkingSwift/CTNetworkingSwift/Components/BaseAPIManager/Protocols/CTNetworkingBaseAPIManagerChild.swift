@@ -8,7 +8,8 @@
 import Alamofire
 
 public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
-    var identifier : String { get }
+    var serviceIdentifier : String { get }
+    var loginServiceIdentifier : String { get }
     var moduleName : String { get }
     var isPagable : Bool { get }
     var methodName : String { get }

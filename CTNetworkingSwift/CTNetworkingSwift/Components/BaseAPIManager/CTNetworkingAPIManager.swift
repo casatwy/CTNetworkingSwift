@@ -20,5 +20,6 @@ open class CTNetworkingAPIManager : NSObject {
     public var response : AFDataResponse<Data?>? = nil
 
     public var isLoading : Bool = false
+    public var isAPINeedLoginInfo : Bool = false
     public let managerIdentifier = UUID().uuidString
 }

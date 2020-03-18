@@ -14,4 +14,10 @@ extension CTMediator {
         guard let service = performTarget(identifier, action: identifier, params: params, shouldCacheTarget: true) as? CTNetworkingService else { return nil }
         return service
     }
+    
+    func fetchCTNetworkingLoginService(identifier:String, moduleName:String) -> CTNetworkingLoginService? {
+        let params = [kCTMediatorParamsKeySwiftTargetModuleName:moduleName]
+        guard let service = performTarget(identifier, action: identifier, params: params, shouldCacheTarget: true) as? CTNetworkingLoginService else { return nil }
+        return service
+    }
 }
