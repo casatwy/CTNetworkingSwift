@@ -1,39 +1,15 @@
 //
-//  API.BaseAPIManager.extension.swift
-//  CTNetworking.Swift
+//  private.CTNetworkingAPIManager.extension.swift
+//  CTNetworkingSwift
 //
-//  Created by casa on 2018/9/21.
+//  Created by casa on 2020/3/18.
+//  Copyright © 2020 casa. All rights reserved.
 //
 
-import Alamofire
 import CTMediator
 
-public protocol CTNetworkingAPIManagerCallable {
-    func loadData()
-}
-
-extension CTNetworkingAPIManager : CTNetworkingAPIManagerCallable {
-    public func loadData() {
-        guard let _child = child else { return }
-        if isAPINeedLoginInfo {
-            guard let loginService = CTMediator.sharedInstance().fetchCTNetworkingLoginService(identifier: _child.loginServiceIdentifier, moduleName: _child.moduleName) else { return }
-            if loginService.isCurrentLoggedIn() == false {
-                loginService.doLoginProcess(success: { (loginAPIManager:CTNetworkingAPIManager) in
-                    loginService.loginSuccessOperation(apiManager: self, loginAPIManager: loginAPIManager)
-                }, fail: { (loginAPIManager:CTNetworkingAPIManager) in
-                    loginService.loginFailOperation(apiManager: self, loginAPIManager: loginAPIManager)
-                }) { (loginAPIManager:CTNetworkingAPIManager) in
-                    loginService.loginCancelOperation(apiManager: self, loginAPIManager: loginAPIManager)
-                }
-            } else {
-                apiCallingProcess(_child: _child)
-            }
-        } else {
-            apiCallingProcess(_child: _child)
-        }
-    }
-    
-    private func apiCallingProcess(_child:CTNetworkingAPIManagerChild) {
+extension CTNetworkingAPIManager {
+    func apiCallingProcess(_child:CTNetworkingAPIManagerChild) {
         let params = _child.transformParams(paramSource?.params(for: self))
 
         guard validator?.isCorrect(manager: self, params: params) == CTNetworkingErrorType.Params.correct else {
@@ -77,6 +53,5 @@ extension CTNetworkingAPIManager : CTNetworkingAPIManagerCallable {
         }
 
         afterAPICalling(self, params: params)
-        
     }
 }
