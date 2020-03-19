@@ -14,6 +14,7 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var isPagable : Bool { get }
     var methodName : String { get }
     var requestType : HTTPMethod { get }
+    var isAPINeedLoginInfo : Bool { get }
     func transformParams(_ params:Parameters?) -> Parameters?
 }
 

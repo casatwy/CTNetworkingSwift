@@ -10,9 +10,10 @@ import CTMediator
 
 public extension CTNetworkingAPIManager {
     func loadData() {
-        guard let _child = child else { return }
-        if isAPINeedLoginInfo {
-            guard let loginService = CTMediator.sharedInstance().fetchCTNetworkingLoginService(identifier: _child.loginServiceIdentifier, moduleName: _child.moduleName) else { return }
+        guard let child = child else { return }
+        
+        if child.isAPINeedLoginInfo {
+            guard let loginService = CTMediator.sharedInstance().fetchCTNetworkingLoginService(identifier: child.loginServiceIdentifier, moduleName: child.moduleName) else { return }
             if loginService.isCurrentLoggedIn() == false {
                 loginService.doLoginProcess(success: { (loginAPIManager:CTNetworkingAPIManager) in
                     loginService.loginSuccessOperation(apiManager: self, loginAPIManager: loginAPIManager)
@@ -22,10 +23,10 @@ public extension CTNetworkingAPIManager {
                     loginService.loginCancelOperation(apiManager: self, loginAPIManager: loginAPIManager)
                 }
             } else {
-                apiCallingProcess(_child: _child)
+                apiCallingProcess(child)
             }
         } else {
-            apiCallingProcess(_child: _child)
+            apiCallingProcess(child)
         }
     }
 }

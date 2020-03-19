@@ -9,8 +9,8 @@
 import CTMediator
 
 extension CTNetworkingAPIManager {
-    func apiCallingProcess(_child:CTNetworkingAPIManagerChild) {
-        let params = _child.transformParams(paramSource?.params(for: self))
+    func apiCallingProcess(_ child:CTNetworkingAPIManagerChild) {
+        let params = child.transformParams(paramSource?.params(for: self))
 
         guard validator?.isCorrect(manager: self, params: params) == CTNetworkingErrorType.Params.correct else {
             fail()
@@ -18,14 +18,14 @@ extension CTNetworkingAPIManager {
         }
         
         guard shouldCallAPI(self, params: params) else { return }
-        guard let service = CTMediator.sharedInstance().fetchCTNetworkingService(identifier: _child.serviceIdentifier, moduleName: _child.moduleName) else { return }
-        guard let request = service.request(params: params, methodName: _child.methodName, requestType: _child.requestType) else {
+        guard let service = CTMediator.sharedInstance().fetchCTNetworkingService(identifier: child.serviceIdentifier, moduleName: child.moduleName) else { return }
+        guard let request = service.request(params: params, methodName: child.methodName, requestType: child.requestType) else {
             return
         }
         self.request = request
         
         #if DEBUG
-        print(request.logString(apiName: _child.methodName, service: service))
+        print(request.logString(apiName: child.methodName, service: service))
         #endif
 
         isLoading = true

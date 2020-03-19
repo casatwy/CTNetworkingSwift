@@ -20,6 +20,10 @@ class TestAPIManager: CTNetworkingAPIManager {
 extension TestAPIManager: CTNetworkingAPIManagerValidator{}
 
 extension TestAPIManager : CTNetworkingAPIManagerChild {
+    var isAPINeedLoginInfo: Bool {
+        return false
+    }
+    
     var serviceIdentifier: String {
         return "TestService"
     }
