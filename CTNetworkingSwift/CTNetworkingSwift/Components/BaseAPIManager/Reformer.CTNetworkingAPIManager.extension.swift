@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import CTUniversalModel
 
 public protocol CTNetworkingAPIManagerFetchable {
     func fetch(with responseTransformer:CTNetworkingResponseTransformer?) -> Any?
     func fetchAsData() -> Data?
     func fetchAsString() -> String?
     func fetchAsDictionary() -> [AnyHashable:Any]?
+    func fetchUniversalModel(with responseTransformer:CTNetworkingResponseTransformer) -> CTUniversalModel?
 }
 
 extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
@@ -27,6 +29,11 @@ extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
             }
         }
         return transformer.transformResponse(from: self)
+    }
+    
+    public func fetchUniversalModel(with responseTransformer:CTNetworkingResponseTransformer) -> CTUniversalModel? {
+        guard let result = responseTransformer.transformResponse(from: self) as? CTUniversalModel else { return nil }
+        return result
     }
     
     public func fetchAsData() -> Data? {

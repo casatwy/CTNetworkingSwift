@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CTNetworkingSwift"
-  s.version      = "26"
+  s.version      = "27"
   s.summary      = "CTNetworkingSwift."
   s.swift_version= "5.1"
 
@@ -137,5 +137,6 @@ Pod::Spec.new do |s|
   s.dependency "CTMediator"
   s.dependency "Alamofire"
   s.dependency "SwiftyJSON"
+  s.dependency "CTUniversalModel"
 
 end
