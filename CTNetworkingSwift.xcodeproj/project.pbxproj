@@ -23,7 +23,6 @@
 		4A9374B2215BDD4D00B88CB8 /* Callback.ViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937495215BDD4D00B88CB8 /* Callback.ViewController.extension.swift */; };
 		4A9374B3215BDD4D00B88CB8 /* LifeCycle.ViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937496215BDD4D00B88CB8 /* LifeCycle.ViewController.extension.swift */; };
 		4A9374B4215BDD4D00B88CB8 /* CTNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A937498215BDD4D00B88CB8 /* CTNetworking.swift */; };
-		4A9374B5215BDD4D00B88CB8 /* API.CTNetworkingAPIManager.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749B215BDD4D00B88CB8 /* API.CTNetworkingAPIManager.extension.swift */; };
 		4A9374B6215BDD4D00B88CB8 /* Reformer.CTNetworkingAPIManager.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749C215BDD4D00B88CB8 /* Reformer.CTNetworkingAPIManager.extension.swift */; };
 		4A9374B7215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749D215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift */; };
 		4A9374B8215BDD4D00B88CB8 /* CTNetworkingAPIManagerParamSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93749F215BDD4D00B88CB8 /* CTNetworkingAPIManagerParamSource.swift */; };
@@ -59,7 +58,6 @@
 		4A937495215BDD4D00B88CB8 /* Callback.ViewController.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Callback.ViewController.extension.swift; sourceTree = "<group>"; };
 		4A937496215BDD4D00B88CB8 /* LifeCycle.ViewController.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycle.ViewController.extension.swift; sourceTree = "<group>"; };
 		4A937498215BDD4D00B88CB8 /* CTNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworking.swift; sourceTree = "<group>"; };
-		4A93749B215BDD4D00B88CB8 /* API.CTNetworkingAPIManager.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.CTNetworkingAPIManager.extension.swift; sourceTree = "<group>"; };
 		4A93749C215BDD4D00B88CB8 /* Reformer.CTNetworkingAPIManager.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reformer.CTNetworkingAPIManager.extension.swift; sourceTree = "<group>"; };
 		4A93749D215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingAPIManager.swift; sourceTree = "<group>"; };
 		4A93749F215BDD4D00B88CB8 /* CTNetworkingAPIManagerParamSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingAPIManagerParamSource.swift; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				4A93749D215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift */,
-				4A93749B215BDD4D00B88CB8 /* API.CTNetworkingAPIManager.extension.swift */,
 				4A8736622422589700E8B1CA /* private.CTNetworkingAPIManager.extension.swift */,
 				4A93749C215BDD4D00B88CB8 /* Reformer.CTNetworkingAPIManager.extension.swift */,
 				4A9374A4215BDD4D00B88CB8 /* Callback.CTNetworkingAPIManager.extension.swift */,
@@ -387,7 +384,6 @@
 				4A9374BB215BDD4D00B88CB8 /* CTNetworkingAPIManagerCallbackDelegate.swift in Sources */,
 				4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */,
 				4A9374B1215BDD4D00B88CB8 /* ParamSource.ViewController.extension.swift in Sources */,
-				4A9374B5215BDD4D00B88CB8 /* API.CTNetworkingAPIManager.extension.swift in Sources */,
 				4A9374B7215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift in Sources */,
 				4AFCFC522421CBF300334313 /* LoginServiceProtocol.swift in Sources */,
 				4A9374BA215BDD4D00B88CB8 /* CTNetworkingAPIManagerValidator.swift in Sources */,
