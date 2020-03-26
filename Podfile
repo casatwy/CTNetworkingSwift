@@ -7,7 +7,6 @@ target 'CTNetworkingSwift' do
 
   # Pods for CTNetworkingSwift
   pod "Alamofire"
-  pod "CTUniversalModel"
 
   # Private Pods
   pod "SwiftHandyFrame"
