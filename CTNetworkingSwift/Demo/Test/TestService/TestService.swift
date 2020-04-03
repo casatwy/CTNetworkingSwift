@@ -12,7 +12,7 @@ import Alamofire
 class TestService : CTNetworkingService {
     static let shared: CTNetworkingService = TestService()
     
-    lazy var session: Session = Session.default
+    lazy var session: SessionManager = SessionManager()
 
     func request(params: Parameters?, methodName: String, requestType: HTTPMethod) -> URLRequest? {
         // need return DataRequest

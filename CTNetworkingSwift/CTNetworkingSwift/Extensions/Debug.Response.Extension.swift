@@ -9,14 +9,14 @@
 import Foundation
 import Alamofire
 
-extension DataResponse {
+extension DefaultDataResponse {
     public func logString() -> String {
         
         guard let response = response else { return "No Response" }
         guard let request = request else { return "No Request" }
 
         var logString = "\n\n=========================================\nAPI Response\n=========================================\n\n"
-        logString += "Headers:\(response.headers.dictionary)\n\n"
+        logString += "Headers:\(response.allHeaderFields)\n\n"
         logString += "Status:\t\(response.statusCode)\t\(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))\n\n"
 
         if let data = data {

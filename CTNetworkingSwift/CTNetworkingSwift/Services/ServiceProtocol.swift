@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 public protocol CTNetworkingService {
-    var session : Session { get }
+    var session : SessionManager { get }
     func request(params:Parameters?, methodName:String, requestType:HTTPMethod) -> URLRequest?
     func handleCommonError(_ apiManager:CTNetworkingAPIManager) -> Bool
 }
