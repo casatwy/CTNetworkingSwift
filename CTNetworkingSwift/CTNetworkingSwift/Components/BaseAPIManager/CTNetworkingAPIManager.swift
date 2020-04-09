@@ -29,12 +29,12 @@ open class CTNetworkingAPIManager : NSObject {
         if child.isAPINeedLoginInfo {
             guard let loginService = CTMediator.sharedInstance().fetchCTNetworkingLoginService(identifier: child.loginServiceIdentifier, moduleName: child.moduleName) else { return }
             if loginService.isCurrentLoggedIn() == false {
-                loginService.doLoginProcess(success: { (loginAPIManager:CTNetworkingAPIManager) in
-                    loginService.loginSuccessOperation(apiManager: self, loginAPIManager: loginAPIManager)
-                }, fail: { (loginAPIManager:CTNetworkingAPIManager) in
-                    loginService.loginFailOperation(apiManager: self, loginAPIManager: loginAPIManager)
-                }) { (loginAPIManager:CTNetworkingAPIManager) in
-                    loginService.loginCancelOperation(apiManager: self, loginAPIManager: loginAPIManager)
+                loginService.doLoginProcess(success: {
+                    loginService.loginSuccessOperation(apiManager: self)
+                }, fail: {
+                    loginService.loginFailOperation(apiManager: self)
+                }) {
+                    loginService.loginCancelOperation(apiManager: self)
                 }
             } else {
                 apiCallingProcess(child)
