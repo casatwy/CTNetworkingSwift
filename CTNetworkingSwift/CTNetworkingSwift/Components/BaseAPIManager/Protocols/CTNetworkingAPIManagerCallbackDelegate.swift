@@ -10,4 +10,11 @@ import Foundation
 public protocol CTNetworkingAPIManagerCallbackDelegate : AnyObject {
     func requestDidSuccess(_ apiManager:CTNetworkingAPIManager)
     func requestDidFailed(_ apiManager:CTNetworkingAPIManager)
+    func shouldContinueRequestAfterLogin(_ apiManager:CTNetworkingAPIManager) -> Bool
+}
+
+public extension CTNetworkingAPIManagerCallbackDelegate {
+    func shouldContinueRequestAfterLogin(_ apiManager:CTNetworkingAPIManager) -> Bool {
+        return true
+    }
 }

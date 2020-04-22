@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (5.1.0)
-  - CTMediator (29)
-  - SwiftHandyFrame (14)
+  - CTMediator (31)
+  - SwiftHandyFrame (15)
 
 DEPENDENCIES:
   - Alamofire
@@ -16,8 +16,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
-  CTMediator: 69d19c35a6c37f44d047b82ebb822eadff46af84
-  SwiftHandyFrame: 75f90e305a27a6a3328d5c2a0278c10775b5ca73
+  CTMediator: 24a1279bd0909608c7d6a704e660149cc64e5f87
+  SwiftHandyFrame: 76340da8630c255a0b48f70a323f2d2b408babcc
 
 PODFILE CHECKSUM: 6ea071597123cf9c99463ee4ce240cb8dbff00b4
 
