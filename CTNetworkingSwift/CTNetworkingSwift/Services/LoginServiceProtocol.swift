@@ -10,7 +10,7 @@ import Foundation
 
 public protocol CTNetworkingLoginService {
     func isCurrentLoggedIn() -> Bool
-    func doLoginProcess(success:(()->Void)?, fail:(()->Void)?, cancel:(()->Void)?)
+    func doLoginProcess(success:(()->Void)?, fail:(()->Void)?, cancel:(()->Void)?, apiManager:CTNetworkingAPIManager)
     func loginSuccessOperation(apiManager:CTNetworkingAPIManager)
     func loginFailOperation(apiManager:CTNetworkingAPIManager)
     func loginCancelOperation(apiManager:CTNetworkingAPIManager)

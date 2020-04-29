@@ -33,9 +33,9 @@ open class CTNetworkingAPIManager : NSObject {
                     loginService.loginSuccessOperation(apiManager: self)
                 }, fail: {
                     loginService.loginFailOperation(apiManager: self)
-                }) {
+                }, cancel: {
                     loginService.loginCancelOperation(apiManager: self)
-                }
+                }, apiManager: self)
             } else {
                 apiCallingProcess(child)
             }
