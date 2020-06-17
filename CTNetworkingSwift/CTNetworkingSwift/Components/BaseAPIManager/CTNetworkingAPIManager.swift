@@ -43,4 +43,11 @@ open class CTNetworkingAPIManager : NSObject {
             apiCallingProcess(child)
         }
     }
+    
+    public func setupCachedResponse(cachedData:Data) {
+        let result = Result<Data?, AFError>.success(cachedData)
+        let httpResponse = HTTPURLResponse(url: request?.url ?? URL(fileURLWithPath: "cached response"), statusCode: 200, httpVersion: "1.1", headerFields: response?.response?.headers.dictionary)
+        let response = AFDataResponse<Data?>(request: request, response: httpResponse, data: cachedData, metrics: nil, serializationDuration: 10, result: result)
+        self.response = response
+    }
 }
