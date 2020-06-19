@@ -16,10 +16,15 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var requestType : HTTPMethod { get }
     var isAPINeedLoginInfo : Bool { get }
     func transformParams(_ params:Parameters?) -> Parameters?
+    func extraURLParams(_ params:Parameters?) -> Parameters?
 }
 
 public extension CTNetworkingAPIManagerChild {
     func transformParams(_ params:Parameters?) -> Parameters? {
         return params
+    }
+    
+    func extraURLParams(_ params:Parameters?) -> Parameters? {
+        return nil
     }
 }
