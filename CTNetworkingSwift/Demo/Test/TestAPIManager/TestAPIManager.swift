@@ -47,4 +47,9 @@ extension TestAPIManager : CTNetworkingAPIManagerChild {
     var moduleName: String {
         return "CTNetworkingSwift"
     }
+    
+    func mockDataFilePathURL() -> URL? {
+        return nil
+//        return Bundle.main.url(forResource: "test", withExtension: "json")
+    }
 }

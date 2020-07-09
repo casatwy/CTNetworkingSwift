@@ -7,6 +7,7 @@
 //
 
 import CTMediator
+import Alamofire
 
 extension CTNetworkingAPIManager {
     func apiCallingProcess(_ child:CTNetworkingAPIManagerChild) {
@@ -28,28 +29,45 @@ extension CTNetworkingAPIManager {
 
         isLoading = true
         
-        service.session.request(request).response { (response) in
-            #if DEBUG
-            print(response.logString())
-            #endif
-            
-            self.isLoading = false
-            self.response = response
-            self.interceptor?.didReceiveResponse(self)
-
-            guard service.handleCommonError(self) else { return }
-
-            if response.error == nil {
-                if self.validator?.isCorrect(manager: self) != CTNetworkingErrorType.Response.correct {
-                    self.fail()
-                } else {
-                    self.success()
-                }
-            } else {
-                self.fail()
+        if let mockDataFilePathURL = self.child?.mockDataFilePathURL(),
+            let mockData = try? Data(contentsOf: mockDataFilePathURL),
+            let requestURL = request.url,
+            let mockHttpResponse = HTTPURLResponse(url: requestURL, statusCode: 200, httpVersion: nil, headerFields: nil)
+        {
+            // 走mock数据
+            DispatchQueue.main.async {
+                let result = Result<Data?, AFError>.success(mockData)
+                let mockResponse = AFDataResponse<Data?>(request: request, response: mockHttpResponse, data: mockData, metrics: nil, serializationDuration: 0, result: result)
+                self.handleResponse(response: mockResponse, service: service)
+            }
+        } else {
+            // 走正常调度
+            service.session.request(request).response { (response) in
+                #if DEBUG
+                print(response.logString())
+                #endif
+                self.handleResponse(response: response, service: service)
             }
         }
-
+        
         afterAPICalling(self, params: params)
+    }
+    
+    func handleResponse(response:AFDataResponse<Data?>, service:CTNetworkingService) {
+        self.isLoading = false
+        self.response = response
+        self.interceptor?.didReceiveResponse(self)
+        
+        guard service.handleCommonError(self) else { return }
+
+        if response.error == nil {
+            if self.validator?.isCorrect(manager: self) != CTNetworkingErrorType.Response.correct {
+                self.fail()
+            } else {
+                self.success()
+            }
+        } else {
+            self.fail()
+        }
     }
 }

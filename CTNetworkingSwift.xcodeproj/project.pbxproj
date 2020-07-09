@@ -32,6 +32,7 @@
 		4A9374BC215BDD4D00B88CB8 /* CTNetworkingAPIManagerChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9374A3215BDD4D00B88CB8 /* CTNetworkingAPIManagerChild.swift */; };
 		4A9374BD215BDD4D00B88CB8 /* Callback.CTNetworkingAPIManager.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9374A4215BDD4D00B88CB8 /* Callback.CTNetworkingAPIManager.extension.swift */; };
 		4A9374BE215BDD4D00B88CB8 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9374A6215BDD4D00B88CB8 /* ServiceProtocol.swift */; };
+		4A95111624B6F4D700361287 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A95111524B6F4D700361287 /* test.json */; };
 		4AAF5822215BDB5C009E312E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF5821215BDB5C009E312E /* AppDelegate.swift */; };
 		4AAF5827215BDB5C009E312E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF5825215BDB5C009E312E /* Main.storyboard */; };
 		4AAF5829215BDB5D009E312E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF5828215BDB5D009E312E /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		4A9374A3215BDD4D00B88CB8 /* CTNetworkingAPIManagerChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingAPIManagerChild.swift; sourceTree = "<group>"; };
 		4A9374A4215BDD4D00B88CB8 /* Callback.CTNetworkingAPIManager.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Callback.CTNetworkingAPIManager.extension.swift; sourceTree = "<group>"; };
 		4A9374A6215BDD4D00B88CB8 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		4A95111524B6F4D700361287 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		4AAF581E215BDB5C009E312E /* CTNetworkingSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTNetworkingSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF5821215BDB5C009E312E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF5826215BDB5C009E312E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		4A93748E215BDD4D00B88CB8 /* TestAPIManager */ = {
 			isa = PBXGroup;
 			children = (
+				4A95111524B6F4D700361287 /* test.json */,
 				4A93748F215BDD4D00B88CB8 /* TestAPIManager.swift */,
 			);
 			path = TestAPIManager;
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AAF582C215BDB5D009E312E /* LaunchScreen.storyboard in Resources */,
+				4A95111624B6F4D700361287 /* test.json in Resources */,
 				4AAF5829215BDB5D009E312E /* Assets.xcassets in Resources */,
 				4AAF5827215BDB5C009E312E /* Main.storyboard in Resources */,
 			);
