@@ -29,7 +29,7 @@ extension CTNetworkingAPIManager {
 
         isLoading = true
         
-        if let mockDataFilePathURL = self.child?.mockDataFilePathURL(),
+        if let mockDataFilePathURL = self.mockDataFileURL,
             let mockData = try? Data(contentsOf: mockDataFilePathURL),
             let requestURL = request.url,
             let mockHttpResponse = HTTPURLResponse(url: requestURL, statusCode: 200, httpVersion: nil, headerFields: nil)

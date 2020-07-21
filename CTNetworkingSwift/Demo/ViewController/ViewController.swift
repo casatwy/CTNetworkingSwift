@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     lazy var testAPIManager : TestAPIManager = {
         let _testAPIManager = TestAPIManager()
         _testAPIManager.delegate = self
+        _testAPIManager.mockDataFileURL = Bundle.main.url(forResource: "test", withExtension: "json")
         return _testAPIManager
     }()
 

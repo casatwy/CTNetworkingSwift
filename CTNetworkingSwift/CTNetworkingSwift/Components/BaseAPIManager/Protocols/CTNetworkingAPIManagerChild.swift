@@ -17,14 +17,9 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var isAPINeedLoginInfo : Bool { get }
     func transformParams(_ params:Parameters?) -> Parameters?
     func extraURLParams(_ params:Parameters?) -> Parameters?
-    func mockDataFilePathURL() -> URL?
 }
 
 public extension CTNetworkingAPIManagerChild {
-    func mockDataFilePathURL() -> URL? {
-        return nil
-    }
-
     func transformParams(_ params:Parameters?) -> Parameters? {
         return params
     }

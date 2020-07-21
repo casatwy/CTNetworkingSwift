@@ -19,6 +19,7 @@ open class CTNetworkingAPIManager : NSObject {
 
     public var request : URLRequest? = nil
     public var response : AFDataResponse<Data?>? = nil
+    public var mockDataFileURL : URL? = nil
 
     public var isLoading : Bool = false
     public let managerIdentifier = UUID().uuidString
