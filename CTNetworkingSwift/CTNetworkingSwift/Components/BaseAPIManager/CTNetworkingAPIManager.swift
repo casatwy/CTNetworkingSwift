@@ -5,7 +5,6 @@
 //  Created by casa on 2018/9/20.
 //
 
-import UIKit
 import Alamofire
 import CTMediator
 
