@@ -43,4 +43,10 @@ extension CTNetworkingAPIManager : CTNetworkingAPIManagerFetchable {
         let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [AnyHashable:Any]
         return result
     }
+    
+    public func fetchAsArray() -> [Any]? {
+        guard let data = self.response?.data else { return nil }
+        let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any]
+        return result
+    }
 }
