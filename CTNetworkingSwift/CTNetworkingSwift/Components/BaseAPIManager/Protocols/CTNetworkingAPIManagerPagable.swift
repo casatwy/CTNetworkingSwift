@@ -22,7 +22,7 @@ public protocol CTNetworkingAPIManagerPagable : CTNetworkingAPIManager {
     func refreshCurrentPage(page:Int)
 }
 
-extension CTNetworkingAPIManagerPagable {
+public extension CTNetworkingAPIManagerPagable {
     func loadNextPage() {}
     func loadPreviousPage() {}
     func load(page:Int) {}
