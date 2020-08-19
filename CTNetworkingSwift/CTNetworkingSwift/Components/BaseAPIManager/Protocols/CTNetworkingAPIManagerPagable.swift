@@ -23,6 +23,10 @@ public protocol CTNetworkingAPIManagerPagable : CTNetworkingAPIManager {
 }
 
 public extension CTNetworkingAPIManagerPagable {
+    var nextStep: Int {
+        return 1
+    }
+
     func loadNextPage() {}
     func loadPreviousPage() {}
     func load(page:Int) {}
