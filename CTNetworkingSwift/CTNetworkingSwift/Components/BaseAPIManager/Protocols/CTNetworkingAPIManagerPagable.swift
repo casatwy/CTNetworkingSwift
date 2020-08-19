@@ -18,8 +18,8 @@ public protocol CTNetworkingAPIManagerPagable : CTNetworkingAPIManager {
 
     func loadNextPage()
     func loadPreviousPage()
-    func load(page:Int)
-    func refreshCurrentPage(page:Int)
+    func loadPage(_ page:Int)
+    func refreshCurrentPage()
 }
 
 public extension CTNetworkingAPIManagerPagable {
@@ -29,6 +29,6 @@ public extension CTNetworkingAPIManagerPagable {
 
     func loadNextPage() {}
     func loadPreviousPage() {}
-    func load(page:Int) {}
-    func refreshCurrentPage(page:Int) {}
+    func loadPage(_ page:Int) {}
+    func refreshCurrentPage() {}
 }
