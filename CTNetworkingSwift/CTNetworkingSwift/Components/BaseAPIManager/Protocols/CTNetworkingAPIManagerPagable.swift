@@ -21,3 +21,10 @@ public protocol CTNetworkingAPIManagerPagable : CTNetworkingAPIManager {
     func load(page:Int)
     func refreshCurrentPage(page:Int)
 }
+
+extension CTNetworkingAPIManagerPagable {
+    func loadNextPage() {}
+    func loadPreviousPage() {}
+    func load(page:Int) {}
+    func refreshCurrentPage(page:Int) {}
+}
