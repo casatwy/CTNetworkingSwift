@@ -14,7 +14,7 @@ public protocol CTNetworkingAPIManagerPagable : CTNetworkingAPIManager {
     var isFirstPage : Bool { get }
     var currentPageNumber : Int { get }
     var totalCount : Int? { get }
-    var nextStep : Int? { get }
+    var nextStep : Int { get }
 
     func loadNextPage()
     func loadPreviousPage()
