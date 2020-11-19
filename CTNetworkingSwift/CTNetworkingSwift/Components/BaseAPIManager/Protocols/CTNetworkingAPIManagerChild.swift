@@ -10,6 +10,7 @@ import Alamofire
 public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var serviceIdentifier : String { get }
     var loginServiceIdentifier : String { get }
+    var logHandleIdentifier : String { get }
     var moduleName : String { get }
     var isPagable : Bool { get }
     var methodName : String { get }
@@ -20,6 +21,10 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
 }
 
 public extension CTNetworkingAPIManagerChild {
+    var logHandleIdentifier: String {
+        return ""
+    }
+    
     func transformParams(_ params:Parameters?) -> Parameters? {
         return params
     }
