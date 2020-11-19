@@ -24,7 +24,10 @@ extension CTNetworkingAPIManager {
         self.request = request
         
         #if DEBUG
-        print(request.logString(apiName: child.methodName, service: service))
+        let requestLogMessage = request.logString(apiName: child.methodName, service: service)
+        if !CTMediator.sharedInstance().customHandleLogMessage(identifier: child.logHandleIdentifier, moduleName: child.moduleName, message: requestLogMessage) {
+            print(requestLogMessage)
+        }
         #endif
 
         isLoading = true
@@ -44,7 +47,10 @@ extension CTNetworkingAPIManager {
             // 走正常调度
             service.session.request(request).response { (response) in
                 #if DEBUG
-                print(response.logString())
+                let responseLogMessage = response.logString()
+                if !CTMediator.sharedInstance().customHandleLogMessage(identifier: child.logHandleIdentifier, moduleName: child.moduleName, message: responseLogMessage) {
+                    print(responseLogMessage)
+                }
                 #endif
                 self.handleResponse(response: response, service: service)
             }

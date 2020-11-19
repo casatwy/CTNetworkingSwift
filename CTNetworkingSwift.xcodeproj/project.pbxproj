@@ -38,6 +38,8 @@
 		4AAF5829215BDB5D009E312E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF5828215BDB5D009E312E /* Assets.xcassets */; };
 		4AAF582C215BDB5D009E312E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF582A215BDB5D009E312E /* LaunchScreen.storyboard */; };
 		4AFCFC522421CBF300334313 /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCFC512421CBF300334313 /* LoginServiceProtocol.swift */; };
+		747ADE5F25669BC900361D6D /* Debug.Log.CTMediator.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747ADE5E25669BC900361D6D /* Debug.Log.CTMediator.Extension.swift */; };
+		747ADE622566A03200361D6D /* LogHandleTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747ADE612566A03200361D6D /* LogHandleTarget.swift */; };
 		B11A445306298D39E166C910 /* Pods_CTNetworkingSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B21A842E0906B61311AD2E9 /* Pods_CTNetworkingSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		4AAF582B215BDB5D009E312E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AAF582D215BDB5D009E312E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AFCFC512421CBF300334313 /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
+		747ADE5E25669BC900361D6D /* Debug.Log.CTMediator.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.Log.CTMediator.Extension.swift; sourceTree = "<group>"; };
+		747ADE612566A03200361D6D /* LogHandleTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHandleTarget.swift; sourceTree = "<group>"; };
 		D6E59D57E0CC0C8DF4D88D77 /* Pods-CTNetworkingSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwift.release.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwift/Pods-CTNetworkingSwift.release.xcconfig"; sourceTree = "<group>"; };
 		F0CD37C17C880E7F3657CEEA /* Pods-CTNetworkingSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwift.debug.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwift/Pods-CTNetworkingSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,7 @@
 				4A460E7C215DEC2A00C98571 /* Debug.Request.extension.swift */,
 				4A460E7E215DEC3700C98571 /* Debug.Response.Extension.swift */,
 				4A02B65F2408E40D00A761DF /* Service.CTMediator.Extension.swift */,
+				747ADE5E25669BC900361D6D /* Debug.Log.CTMediator.Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				4A02B6612408E4D700A761DF /* ServiceTarget.swift */,
+				747ADE612566A03200361D6D /* LogHandleTarget.swift */,
 				4A93748C215BDD4D00B88CB8 /* TestService */,
 				4A93748E215BDD4D00B88CB8 /* TestAPIManager */,
 			);
@@ -374,6 +380,7 @@
 				4A9374B4215BDD4D00B88CB8 /* CTNetworking.swift in Sources */,
 				4A9374BE215BDD4D00B88CB8 /* ServiceProtocol.swift in Sources */,
 				4A02B6622408E4D700A761DF /* ServiceTarget.swift in Sources */,
+				747ADE5F25669BC900361D6D /* Debug.Log.CTMediator.Extension.swift in Sources */,
 				4A460E7F215DEC3700C98571 /* Debug.Response.Extension.swift in Sources */,
 				4A9374B3215BDD4D00B88CB8 /* LifeCycle.ViewController.extension.swift in Sources */,
 				4AAF5822215BDB5C009E312E /* AppDelegate.swift in Sources */,
@@ -387,6 +394,7 @@
 				4A02B6602408E40D00A761DF /* Service.CTMediator.Extension.swift in Sources */,
 				4A9374BB215BDD4D00B88CB8 /* CTNetworkingAPIManagerCallbackDelegate.swift in Sources */,
 				4A460E7D215DEC2A00C98571 /* Debug.Request.extension.swift in Sources */,
+				747ADE622566A03200361D6D /* LogHandleTarget.swift in Sources */,
 				4A9374B1215BDD4D00B88CB8 /* ParamSource.ViewController.extension.swift in Sources */,
 				4A9374B7215BDD4D00B88CB8 /* CTNetworkingAPIManager.swift in Sources */,
 				4AFCFC522421CBF300334313 /* LoginServiceProtocol.swift in Sources */,

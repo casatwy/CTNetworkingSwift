@@ -32,6 +32,10 @@ extension TestAPIManager : CTNetworkingAPIManagerChild {
         return "TestService"
     }
     
+    var logHandleIdentifier: String {
+        return "LogHandle"
+    }
+    
     var isPagable: Bool {
         return false
     }
