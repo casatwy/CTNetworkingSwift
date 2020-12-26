@@ -16,6 +16,7 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var methodName : String { get }
     var requestType : HTTPMethod { get }
     var isAPINeedLoginInfo : Bool { get }
+    var shouldCacheToNative : Bool { get }
     func transformParams(_ params:Parameters?) -> Parameters?
     func extraURLParams(_ params:Parameters?) -> Parameters?
 }
@@ -23,6 +24,10 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
 public extension CTNetworkingAPIManagerChild {
     var logHandleIdentifier: String {
         return ""
+    }
+    
+    var shouldCacheToNative : Bool {
+        return false
     }
     
     func transformParams(_ params:Parameters?) -> Parameters? {
