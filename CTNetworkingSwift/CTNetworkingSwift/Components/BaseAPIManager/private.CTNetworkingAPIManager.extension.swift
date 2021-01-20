@@ -45,7 +45,8 @@ extension CTNetworkingAPIManager {
             }
         } else {
             // 走正常调度
-            service.session.request(request).response { (response) in
+            let session = child.session ?? service.session
+            session.request(request).response { (response) in
                 #if DEBUG
                 let responseLogMessage = response.logString()
                 if !CTMediator.sharedInstance().customHandleLogMessage(identifier: child.logHandleIdentifier, moduleName: child.moduleName, message: responseLogMessage) {
