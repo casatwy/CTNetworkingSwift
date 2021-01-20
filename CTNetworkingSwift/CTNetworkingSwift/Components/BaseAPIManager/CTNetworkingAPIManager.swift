@@ -20,6 +20,7 @@ open class CTNetworkingAPIManager : NSObject {
     public var response : AFDataResponse<Data?>? = nil
     public var mockDataFileURL : URL? = nil
     public var session : Session? = nil
+    public var timeout : TimeInterval? = nil
 
     public var isLoading : Bool = false
     public let managerIdentifier = UUID().uuidString
