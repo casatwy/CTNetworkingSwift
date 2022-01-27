@@ -20,7 +20,7 @@ extension CTNetworkingAPIManager {
         
         guard shouldCallAPI(self, params: params) else { return }
         guard let service = CTMediator.sharedInstance().fetchCTNetworkingService(identifier: child.serviceIdentifier, moduleName: child.moduleName) else { return }
-        guard var request = service.request(params: params, extraURLParams: child.extraURLParams(params), methodName: child.methodName, requestType: child.requestType) else { return }
+        guard var request = service.request(params: params, extraURLParams: child.extraURLParams(params), methodName: child.methodName, requestType: child.requestType, headers:child.headers) else { return }
         if let timeout = child.timeout {
             request.timeoutInterval = timeout
         }
