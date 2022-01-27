@@ -16,6 +16,7 @@ public protocol CTNetworkingAPIManagerChild : CTNetworkingAPIManager {
     var methodName : String { get }
     var requestType : HTTPMethod { get }
     var isAPINeedLoginInfo : Bool { get }
+    var headers: HTTPHeaders? { get }
     func transformParams(_ params:Parameters?) -> Parameters?
     func extraURLParams(_ params:Parameters?) -> Parameters?
 }
@@ -24,7 +25,9 @@ public extension CTNetworkingAPIManagerChild {
     var logHandleIdentifier: String {
         return ""
     }
-    
+    var headers: HTTPHeaders? {
+        return nil
+    }
     func transformParams(_ params:Parameters?) -> Parameters? {
         return params
     }
